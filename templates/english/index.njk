@@ -1,0 +1,29 @@
+---
+breadcrumbs: true
+contentHeader: "Template index"
+dateModified: 2025-08-18
+description: "A collection of template examples."
+title: "Template index"
+---
+
+<p class="gcds-text">Auto-generated index of English templates discovered under <code>templates/english/</code>.</p>
+
+<gcds-grid columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" gap="400">
+{% for page in collections.english %}
+  {% if page.url and page.fileSlug and page.url != "/en/" and (page.inputPath.endsWith('.html') or page.inputPath.endsWith('.md')) %}
+    <gcds-card 
+      card-title="{{ page.data.title or page.fileSlug | replace("-", " ") | capitalize }}"
+      href="{{ page.url }}"
+      type="link"
+    >
+      {% if page.data.description %}
+        <p slot="content">{{ page.data.description }}</p>
+      {% else %}
+        <p slot="content">Template: {{ page.fileSlug }}</p>
+      {% endif %}
+    </gcds-card>
+  {% endif %}
+{% endfor %}
+</gcds-grid>
+
+<p class="mt-600"><gcds-link href="/en/gallery/">View gallery by folder</gcds-link></p>
