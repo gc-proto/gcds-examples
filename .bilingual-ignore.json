@@ -1,0 +1,10 @@
+{
+  "ignore": [
+    "templates/english/index.njk",
+    "templates/french/index.njk",
+    "templates/english/gallery.njk",
+    "templates/french/galerie.njk",
+    "templates/english/example.njk",
+    "templates/french/exemple.njk"
+  ]
+}

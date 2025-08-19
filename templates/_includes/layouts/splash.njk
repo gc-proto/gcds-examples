@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="{{ lang | default('en') }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title | default('Canada.ca') }}</title>
+    <meta name="description" content="{{ description | default('The Government of Canada website is a single point of access to all programs, services, departments, ministries and organizations of the Government of Canada.') }}" />
+    
+    <!-- Dublin Core metadata for government compliance -->
+    <link rel="schema.dcterms" href="http://purl.org/dc/terms/">
+    <meta name="dcterms.description" content="{{ description | default('The Government of Canada website is a single point of access to all programs, services, departments, ministries and organizations of the Government of Canada.') }}">
+    <meta name="dcterms.creator" content="Government of Canada">
+    <meta name="dcterms.title" content="{{ title | default('Canada.ca') }}">
+    <meta name="dcterms.issued" title="W3CDTF" content="{{ issued | default('2025-08-15') }}">
+    <meta name="dcterms.modified" title="W3CDTF" content="{{ modified | default('2025-08-15') }}">
+    <meta name="dcterms.subject" content="GV Government and Politics">
+    <meta name="dcterms.language" title="ISO639-2" content="{{ 'eng' if lang == 'en' else 'fra' }}">
+
+    <!-- GC Design System -->
+    <link rel="stylesheet" href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.css"/>
+    <script type="module" src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.esm.js"></script>
+
+    <!-- WET-BOEW Stylesheets -->
+    <link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/theme.min.css" rel="stylesheet">
+    <link href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/css/messages.min.css" rel="stylesheet">
+
+    {% if hreflang %}
+      {% for link in hreflang %}
+        <link rel="alternate" hreflang="{{ link.lang }}" href="{{ link.href }}" />
+      {% endfor %}
+    {% endif %}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/favicon.ico">
+  </head>
+  
+  <body class="splash" vocab="http://schema.org/" resource="#wb-webpage" typeof="WebPage">
+    
+    <!-- Optional randomized background images -->
+    {% if backgroundImages %}
+    <div id="bg" data-wb-randomize='{ "shuffle": true, "selector": "img", "toggle": "hide" }'>
+      {% for image in backgroundImages %}
+      <img class="hide" src="{{ image.src }}" alt="{{ image.alt | default('') }}">
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <main property="mainContentOfPage" resource="#wb-main" typeof="WebPageElement">
+      <div class="sp-hb">
+				<div class="sp-bx col-xs-12">
+          <gcds-sr-only>
+  					<gcds-heading tag="h1" property="name">{{ page.title }}</gcds-heading>
+          </gcds-sr-only>
+					<div class="row">
+						<div class="col-xs-11 col-md-8" property="publisher" resource="#wb-publisher" typeof="GovernmentOrganization">
+							<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/sig-blk-en.svg" width="283" alt="Government of Canada" property="logo"><span class="wb-inv"> / <span lang="fr">Gouvernement du Canada</span></span>
+							<meta property="name" content="Government of Canada">
+							<meta property="name" lang="fr" content="Gouvernement du Canada">
+							<meta property="areaServed" typeof="Country" content="Canada">
+						</div>
+					</div>
+          {% block content %}{{ content | safe }}{% endblock %}
+        </div>
+        <div class="sp-bx-bt col-xs-12">
+					<div class="row">
+						<div class="col-xs-7 col-md-8">
+							<gcds-link href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</gcds-link> <span class="glyphicon glyphicon-asterisk"></span> <gcds-link href="https://www.canada.ca/fr/transparence/avis.html" lang="fr">Avis</gcds-link>
+						</div>
+						<div class="col-xs-5 col-md-4 text-right mrgn-bttm-md">
+							<img src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/assets/wmms-blk.svg" width="127" alt="Symbol of the Government of Canada"><span class="wb-inv"> / <span lang="fr">Symbole du gouvernement du Canada</span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+    </main>
+
+    <!-- WET-BOEW Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" 
+            integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB" 
+            crossorigin="anonymous"></script>
+    <script src="https://wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/wet-boew.min.js"></script>
+    <script src="https://wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js"></script>
+
+    <style>
+    /* Minimal splash page overrides for GCWeb compatibility */
+    body.splash {
+      background: #f8f9fa;
+    }
+
+    /* Ensure background images work with WET-BOEW randomizer */
+    #bg img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.9;
+    }
+
+    </style>
+  </body>
+</html>

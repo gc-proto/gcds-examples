@@ -1,0 +1,35 @@
+---
+breadcrumbs:
+  - href: "/en/"
+    text: "GCDS Examples"
+contentHeader: "Gallery by folder"
+dateModified: 2025-08-18
+title: "English Gallery by folder"
+---
+<p class="gcds-text">Grouped by first folder under <code>templates/english/</code>.</p>
+
+{% for group in collections.englishTopics %}
+  {% if not group.topic.endsWith('.njk') %}
+  <section class="gcds-mb-500">
+    <gcds-heading tag="h2" margin-bottom="400">{{ group.topic | replace("-", " ") | capitalize }}</gcds-heading>
+
+    <gcds-grid columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" gap="400">
+      {% for page in group.items %}
+        {% if page.url and page.fileSlug and page.url != "/en/" and (page.inputPath.endsWith('.html') or page.inputPath.endsWith('.md')) %}
+          <gcds-card 
+            card-title="{{ page.data.title or page.fileSlug | replace("-", " ") | capitalize}}"
+            href="{{ page.url }}"
+            type="link"
+          >
+            {% if page.data.description %}
+              <p slot="content">{{ page.data.description }}</p>
+            {% else %}
+              <p slot="content">Template: {{ page.fileSlug }}</p>
+            {% endif %}
+          </gcds-card>
+        {% endif %}
+      {% endfor %}
+    </gcds-grid>
+  </section>
+  {% endif %}
+{% endfor %}
