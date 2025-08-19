@@ -1,0 +1,28 @@
+version: 1
+applications:
+  - appRoot: "."
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci || npm i
+            - node -v
+            - npm run check:bilingual
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: _site
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .cache/**/*
+    environment:
+      variables:
+        NODE_ENV: production
+        ELEVENTY_ENV: production
+  # Set these per environment in Amplify Console
+  # HOST_EN: https://gcds.test.canada.ca
+  # HOST_FR: https://scgc.test.canada.ca

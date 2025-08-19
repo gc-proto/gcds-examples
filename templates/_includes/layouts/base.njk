@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="{{ lang | default('en') }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if title %}{{ title }} – {% endif %}GC Design System Examples</title>
+    <meta name="description" content="{{ description | default('GC Design System example templates and patterns') }}" />
+    <!-- GC Design System Utility -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-utility@1.9.2/dist/gcds-utility.min.css"
+    />
+    <!-- GC Design System Components -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.esm.js"
+    ></script>
+    {% if hreflang %}
+      {% for link in hreflang %}
+        <link rel="alternate" hreflang="{{ link.lang }}" href="{{ link.href }}" />
+      {% endfor %}
+    {% endif %}
+  </head>
+  <body>
+    <gcds-header
+      signature-has-link="true"
+      skip-to-href="#main-content"
+    {% if langToggleDisabled %}
+      lang-href="#"
+    {% else %}
+      {% if lang == 'en' %}
+      lang-href="{{ page.url | replace('/en/', '/fr/') }}"
+      {% else %}
+      lang-href="{{ page.url | replace('/fr/', '/en/') }}"
+      {% endif %}
+    {% endif %}
+    >
+      <!-- Search component in header (optional, can be removed if not needed) -->
+      {% if showSearch %}
+      <gcds-search slot="search"></gcds-search>
+      {% endif %}
+
+      <!-- Breadcrumbs component in header (optional, can be customized per page) -->
+      {% if breadcrumbs %}
+      <gcds-breadcrumbs slot="breadcrumb">
+        {% for crumb in breadcrumbs %}
+        <gcds-breadcrumbs-item href="{{ crumb.href }}">{{ crumb.text }}</gcds-breadcrumbs-item>
+        {% endfor %}
+      </gcds-breadcrumbs>
+      {% endif %}
+    </gcds-header>
+
+    <gcds-container
+      id="main-content"
+      main-container
+      size="xl"
+      centered
+      tag="main"
+    >
+      {% if contentHeader %}
+      <gcds-heading tag="h1">{{ contentHeader }}</gcds-heading>
+      {% endif %}
+      
+      {{ content | safe }}
+
+      <!-- Date modified component -->
+      {% if dateModified %}
+      <gcds-date-modified>{{ dateModified | date("YYYY-MM-DD") }}</gcds-date-modified>
+      {% endif %}
+    </gcds-container>
+
+    <gcds-footer 
+      display="full"
+      contextual-heading="{{ footer.contextualHeading | default('GC Design System Examples') }}"
+      contextual-links='{{ footer.contextualLinks | dump | safe }}'
+    ></gcds-footer>
+
+    <style>
+    /* Optional: visually disable language toggle when counterpart missing */
+    {% if langToggleDisabled %}
+      gcds-header a[href="#"] {
+        pointer-events: none;
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    {% endif %}
+    </style>
+  </body>
+</html>

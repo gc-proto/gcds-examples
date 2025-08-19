@@ -1,0 +1,35 @@
+---
+breadcrumbs:
+  - href: "/fr/"
+    text: "Exemples du Système de Conception GC"
+contentHeader: "Galerie par dossier"
+dateModified: 2025-08-18
+title: "Galerie francophone par dossier"
+---
+<p class="gcds-text">Groupé par le premier dossier sous <code>templates/french/</code>.</p>
+
+{% for group in collections.frenchTopics %}
+  {% if not group.topic.endsWith('.njk') %}
+  <section class="gcds-mb-500">
+    <gcds-heading tag="h2" margin-bottom="400">{{ group.topic | replace("-", " ") | capitalize }}</gcds-heading>
+    
+    <gcds-grid columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" gap="400">
+      {% for page in group.items %}
+        {% if page.url and page.fileSlug and page.url != "/fr/" and (page.inputPath.endsWith('.html') or page.inputPath.endsWith('.md')) %}
+          <gcds-card 
+            card-title="{{ page.data.title or page.fileSlug | replace("-", " ") | capitalize }}"
+            href="{{ page.url }}"
+            type="link"
+          >
+            {% if page.data.description %}
+              <p slot="content">{{ page.data.description }}</p>
+            {% else %}
+              <p slot="content">Modèle : {{ page.fileSlug }}</p>
+            {% endif %}
+          </gcds-card>
+        {% endif %}
+      {% endfor %}
+    </gcds-grid>
+  </section>
+  {% endif %}
+{% endfor %}

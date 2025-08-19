@@ -1,0 +1,29 @@
+---
+breadcrumbs: true
+contentHeader: "Index des modèles"
+dateModified: 2025-08-18
+description: "Une collection d'exemples de modèles."
+title: "Index des modèles"
+---
+
+<p class="gcds-text">Index généré automatiquement des modèles francophones sous <code>templates/french/</code>.</p>
+
+<gcds-grid columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" gap="400">
+{% for page in collections.french %}
+  {% if page.url and page.fileSlug and page.url != "/fr/" and (page.inputPath.endsWith('.html') or page.inputPath.endsWith('.md')) %}
+    <gcds-card 
+      card-title="{{ page.data.title or page.fileSlug | replace("-", " ") | capitalize }}"
+      href="{{ page.url }}"
+      type="link"
+    >
+      {% if page.data.description %}
+        <p slot="content">{{ page.data.description }}</p>
+      {% else %}
+        <p slot="content">Modèle : {{ page.fileSlug }}</p>
+      {% endif %}
+    </gcds-card>
+  {% endif %}
+{% endfor %}
+</gcds-grid>
+
+<p class="mt-600"><gcds-link href="/fr/galerie/">Voir la galerie par dossier</gcds-link></p>
