@@ -27,7 +27,7 @@ showDefaultBreadcrumbs: false
 <section class="most-requested-section">
   <div class="container-wrapper">
     <gcds-container size="xl" centered>
-      <gcds-grid columns="1" columns-tablet="1" columns-desktop="3fr 9fr" class="gap-400">
+      <gcds-grid columns="1" columns-tablet="1" columns-desktop="2fr 10fr" class="gap-400">
         <!-- Heading column -->
         <div>
           <gcds-heading tag="h2" margin-top="0">Most requested</gcds-heading>
@@ -167,8 +167,11 @@ showDefaultBreadcrumbs: false
           img-alt=""
         >
         </gcds-card>
+
+     
     </div>
     <div>
+      
       <section class="gc-followus">
         <gcds-heading tag="h2">On social media</gcds-heading>
         <ul class="social-media-list">
@@ -230,26 +233,26 @@ showDefaultBreadcrumbs: false
 <style>
 
   /* Services and Information Section Styles */
-  .gc-srvinfo {
+  /* .gc-srvinfo {
     padding: 2rem 0;
   }
+   */
   
-  
-  .service-item {
+  /* .service-item {
     margin-bottom: var(--gcds-spacing-100);
   }
-  
-  .service-item gcds-heading {
-    font-size: 1.25rem; /* 20px equivalent */
+   */
+  /* .service-item gcds-heading {
+    font-size: 1.25rem; /* 20px equivalent 
     margin-bottom: var(--gcds-spacing-100);
-    margin-top: var(--gcds-spacing-350); /* ~23px equivalent */
-  }
+    margin-top: var(--gcds-spacing-350); ~23px equivalent
+  } */
   
-  .service-item gcds-text {
-    font-size: 1.125rem; /* 18px equivalent */
+  /* .service-item gcds-text {
+    font-size: 1.125rem; /* 18px equivalent 
     line-height: 1.5;
-  }
-  
+  } 
+   */
   /* Override first service item to have no top margin */
   .service-item:nth-child(-n+3) gcds-heading {
     margin-top: 0;
@@ -258,7 +261,8 @@ showDefaultBreadcrumbs: false
   /* Most Requested Section Styles */
   .most-requested-section {
     background-color: #f5f5f5;
-    padding: 2rem 0;
+    padding-bottom: var(--gcds-spacing-400);
+    padding-top: var(--gcds-spacing-400);
   }
   
   .most-requested-list {
@@ -267,6 +271,7 @@ showDefaultBreadcrumbs: false
     padding-left: 1.5rem;
     line-height: 1.8em;
     columns: 1;
+    font-size: 1.125rem;
     column-gap: 2rem;
   } 
   
@@ -366,9 +371,10 @@ showDefaultBreadcrumbs: false
   
   /* modifications of GCDS-tokens to create navigation style page specs where appropriate, ask GCDS team to make as tokens */
 :root {
-  --gcds-heading-h2-desktop: 700 1.81rem/137% 'Lato', sans-serif !important;  /* size of h3 */
-  --gcds-heading-h2-mobile: 700 1.25rem/133% 'Lato', sans-serif !important;
-  --gcds-heading-h3-desktop: 700 1.38rem/133% 'Lato', sans-serif !important; /* size of h5 for S&I*/
-  --gcds-heading-h3-mobile: 700 1.25rem/133% 'Lato', sans-serif !important;
+  --gcds-heading-h2-desktop: 700 1.81rem/137% 'Lato', sans-serif !important;  /* size of h3 for nav page */
+  --gcds-heading-h2-mobile: 700 1.81rem/137%  'Lato', sans-serif !important;
+  --gcds-heading-h3-desktop: 700 1.38rem/133% 'Lato', sans-serif !important; /* size of h5 for S&I for nav page */
+  --gcds-heading-h3-mobile: 700 1.38rem/133% 'Lato', sans-serif !important;
+  --gcds-font-text: 400 1.125rem / 155% "Noto Sans", sans-serif !important; /* size of body text for nav page */
 }
 </style>
