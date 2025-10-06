@@ -16,7 +16,7 @@ showDefaultBreadcrumbs: false
         <gcds-heading tag="h1" character-limit="false">{{ contentHeader }}</gcds-heading>
         <gcds-text>The introduction block pattern introduces the content of a topic page.</gcds-text>
       </div>
-      <div class="float-right">
+      <div class="d-flex justify-content-end contain-fit">
         <img src="https://dummyimage.com/520x200/000000/FFFFFF.png" alt="">
       </div>
     </gcds-grid>
@@ -232,14 +232,7 @@ showDefaultBreadcrumbs: false
 <style>
 
   /* position the image properly */
-  .float-right {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .float-right img {
-    max-width: 100%;
-    height: auto;
+  .contain-fit img {
     object-fit: contain; /* this preserves aspect ratio */
   }
 
