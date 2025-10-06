@@ -12,12 +12,12 @@ showDefaultBreadcrumbs: false
 <div class="container-wrapper">
   <gcds-container size="xl" centered>
     <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr">
-      <div style="margin-bottom: var(--gcds-spacing-400);">
+      <div>
         <gcds-heading tag="h1" character-limit="false">{{ contentHeader }}</gcds-heading>
         <gcds-text>The introduction block pattern introduces the content of a topic page.</gcds-text>
       </div>
-      <div>
-        <img src="https://dummyimage.com/520x200/000000/FFFFFF.png" alt="" style="height: auto; margin-top: var(--gcds-spacing-400);">
+      <div class="float-right">
+        <img src="https://dummyimage.com/520x200/000000/FFFFFF.png" alt="">
       </div>
     </gcds-grid>
   </gcds-container>
@@ -27,12 +27,11 @@ showDefaultBreadcrumbs: false
 <section class="most-requested-section">
   <div class="container-wrapper">
     <gcds-container size="xl" centered>
-      <gcds-grid columns="1" columns-tablet="1" columns-desktop="2fr 10fr" class="gap-400">
+      <gcds-grid columns="1" columns-tablet="1" columns-desktop="2fr 10fr">
         <!-- Heading column -->
         <div>
-          <gcds-heading tag="h2" margin-top="0">Most requested</gcds-heading>
+          <h2 class="gcds-heading limit mt-0 mb-0 font-h5">Most requested</h2> 
         </div>
-
         <!-- Links column -->
         <div>
           <ul class="most-requested-list bold-content">
@@ -64,8 +63,8 @@ showDefaultBreadcrumbs: false
 <!-- Services and Information Section -->
 <section class="gc-srvinfo container-wrapper">
   <gcds-container size="xl" centered>
-      <gcds-heading tag="h2">Services and information</gcds-heading>
-    <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" class="gap-400">
+    <h2 class="gcds-heading limit mt-500 mb-300">Services and information</h2> <!-- this is usually hidden as standard, but visible to view to work -->
+    <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" class="mb-800">
       <!-- Service Item 1 -->
       <div class="service-item">
         <h3 class="gcds-heading limit mt-0 mb-100">
@@ -232,47 +231,24 @@ showDefaultBreadcrumbs: false
 
 <style>
 
-  /* Services and Information Section Styles */
-  /* .gc-srvinfo {
-    padding: 2rem 0;
+  /* position the image properly */
+  .float-right {
+    display: flex;
+    justify-content: flex-end;
   }
-   */
-  
-  /* .service-item {
-    margin-bottom: var(--gcds-spacing-100);
-  }
-   */
-  /* .service-item gcds-heading {
-    font-size: 1.25rem; /* 20px equivalent 
-    margin-bottom: var(--gcds-spacing-100);
-    margin-top: var(--gcds-spacing-350); ~23px equivalent
-  } */
-  
-  /* .service-item gcds-text {
-    font-size: 1.125rem; /* 18px equivalent 
-    line-height: 1.5;
-  } 
-   */
-  /* Override first service item to have no top margin */
-  .service-item:nth-child(-n+3) gcds-heading {
-    margin-top: 0;
-  }
-  
+
   /* Most Requested Section Styles */
   .most-requested-section {
     background-color: #f5f5f5;
-    padding-bottom: var(--gcds-spacing-400);
-    padding-top: var(--gcds-spacing-400);
+    padding-bottom: var(--gcds-spacing-300);
+    padding-top: var(--gcds-spacing-300);
   }
   
   .most-requested-list {
     list-style: disc;
-    margin: 0;
     padding-left: 1.5rem;
-    line-height: 1.8em;
-    columns: 1;
     font-size: 1.125rem;
-    column-gap: 2rem;
+    font-family: Lato;
   } 
   
   .most-requested-item,
@@ -375,6 +351,6 @@ showDefaultBreadcrumbs: false
   --gcds-heading-h2-mobile: 700 1.81rem/137%  'Lato', sans-serif !important;
   --gcds-heading-h3-desktop: 700 1.38rem/133% 'Lato', sans-serif !important; /* size of h5 for S&I for nav page */
   --gcds-heading-h3-mobile: 700 1.38rem/133% 'Lato', sans-serif !important;
-  /* --gcds-font-text: 400  2px/155% "Noto Sans", sans-serif !important; size of body text for nav page */
+  --gcds-font-text: 400 1.13rem/155% "Noto Sans", sans-serif !important; /* size of body text for nav page */
 }
 </style>
