@@ -237,6 +237,12 @@ showDefaultBreadcrumbs: false
     justify-content: flex-end;
   }
 
+  .float-right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* this preserves aspect ratio */
+  }
+
   /* Most Requested Section Styles */
   .most-requested-section {
     background-color: #f5f5f5;
@@ -244,6 +250,10 @@ showDefaultBreadcrumbs: false
     padding-top: var(--gcds-spacing-300);
   }
   
+  .bold-content {
+    font-weight: 700;
+  }
+
   .most-requested-list {
     list-style: disc;
     padding-left: 1.5rem;
@@ -257,13 +267,7 @@ showDefaultBreadcrumbs: false
     break-inside: avoid;
   }
   
-  .most-requested-item-last {
-    margin-bottom: 0;
-  }
-  
-  .bold-content {
-    font-weight: 700;
-  }
+
   /* Responsive column layout */
   @media (min-width: 768px) {
     .most-requested-list {
