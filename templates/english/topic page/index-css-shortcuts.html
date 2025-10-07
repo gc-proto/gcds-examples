@@ -66,6 +66,7 @@ showDefaultBreadcrumbs: false
     <h2 class="gcds-heading limit mt-400 mb-300">Services and information</h2> <!-- this is usually hidden as standard, but visible to view to work -->
     <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" class="mb-800">
       <!-- Service Item 1 -->
+       <!-- JM notes: do these have to be headers? Can they be GCDS links styled as we need them, ie Lato and 20px? -->
       <div class="service-item">
         <h3 class="gcds-heading limit mt-0 mb-100">
            <gcds-link href="#">[Hyperlink text]</gcds-link>
@@ -148,15 +149,6 @@ showDefaultBreadcrumbs: false
       </gcds-sr-only>
 
       <gcds-grid columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr" gap="400">
-        <gcds-card
-          card-title="[Feature hyperlink text]"
-          card-title-tag="h3"
-          description="Brief description of the feature being promoted."
-          href="#"
-          img-src="https://dummyimage.com/360x203/000000/FFFFFF.png"
-          img-alt=""
-        >
-        </gcds-card>
         <gcds-card
           card-title="[Feature hyperlink text]"
           card-title-tag="h3"
@@ -345,11 +337,10 @@ showDefaultBreadcrumbs: false
   /* modifications of GCDS-tokens to create navigation style page specs where appropriate, ask GCDS team to make as tokens */
 :root {
   --gcds-heading-h2-desktop: 700 1.81rem/137% 'Lato', sans-serif !important;  /* size of h3 for nav page */
-  --gcds-heading-h2-mobile: 700 1.81rem/137%  'Lato', sans-serif !important;
+  --gcds-heading-h2-mobile: 700 1.625rem/123% 'Lato', sans-serif !important; /* size of h3 for nav page on mobile */
   --gcds-heading-h3-desktop: 700 1.25rem/133% 'Lato', sans-serif !important; /* size for S&I for nav page */
-  --gcds-heading-h3-mobile: 700 1.25rem/133% 'Lato', sans-serif !important; /* size for S&I for nav page */
+  --gcds-heading-h3-mobile: 700 1.25rem/133% 'Lato', sans-serif !important; /* size for S&I for nav page if non- responsive */
   --gcds-font-text: 400 1.13rem/155% "Noto Sans", sans-serif !important; /* size of body text for nav page */
-  --gcds-font-text-mobile: 400 1.13rem/155% "Noto Sans", sans-serif !important; /* size of body text for nav page */
-
+  --gcds-font-text-mobile: 400 1.13rem/155% "Noto Sans", sans-serif !important; /* size of body text for nav page if non- responsive, don't want to be as small as footer*/
 }
 </style>
