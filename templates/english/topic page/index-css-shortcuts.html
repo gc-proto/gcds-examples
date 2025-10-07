@@ -61,7 +61,7 @@ showDefaultBreadcrumbs: false
 </section>
 
 <!-- Services and Information Section -->
-<section class="gc-srvinfo container-wrapper">
+<section class="container-wrapper">
   <gcds-container size="xl" centered>
     <h2 class="gcds-heading limit mt-400 mb-300">Services and information</h2> <!-- this is usually hidden as standard, but visible to view to work -->
     <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" class="mb-800">
@@ -124,26 +124,23 @@ showDefaultBreadcrumbs: false
 </section>
 
 <section class="container-wrapper">
-  <gcds-grid columnns="1" columns-tablet="2fr 1fr" columns-desktop="2fr 1fr" gap="400">
-    <div>
-      <gcds-sr-only>
-        <gcds-heading tag="h2">Featured</gcds-heading>
-      </gcds-sr-only>
-
-      <gcds-grid columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr" gap="400">
-        <gcds-card
-          card-title="[Feature hyperlink text]"
-          card-title-tag="h3"
-          description="Brief description of the feature being promoted."
-          href="#"
-          img-src="https://dummyimage.com/360x203/000000/FFFFFF.png"
-          img-alt=""
-        >
-        </gcds-card>
-
-     
-    </div>
-    <div>
+         <!-- JM notes: should be a card variant, image should also be part of the clickable link -->
+  <gcds-grid columnns="3" columns-tablet="2fr 1fr" columns-desktop="2fr 1fr" class="mb-800">
+        <div>
+          <gcds-sr-only>
+            <gcds-heading tag="h2">Featured</gcds-heading>
+          </gcds-sr-only>
+        <gcds-grid class="mb-300 hydrated" columns="1fr" columns-tablet="2fr" align-items="start">
+            <div class="px-203 py-360 gcds-card gcds-card-single">
+                <img src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
+            </div>
+            <div class="mt-300">
+              <gcds-link class="gcds-heading limit mt-0 font-h5" href="#">[Feature hyperlink text]</gcds-link>
+              <p class="mt-100">Brief description of the feature being promoted.</p>
+            </div>
+          </gcds-grid>
+        </div>
+        <div>
       
       <section class="gc-followus">
         <gcds-heading tag="h2">On social media</gcds-heading>
@@ -175,7 +172,7 @@ showDefaultBreadcrumbs: false
             </li>
         </ul>
       </section>
-      <section id="facebook" class="modal-dialog modal-content overlay-def mfp-hide">
+      <!-- <section id="facebook" class="modal-dialog modal-content overlay-def mfp-hide">
         <header class="modal-header">
           <gcds-heading tag="h2" class="modal-title" id="lbx-title">Facebook</gcds-heading>
         </header>
@@ -198,7 +195,7 @@ showDefaultBreadcrumbs: false
             Close<gcds-sr-only>Close overlay</gcds-sr-only>
           </button>
         </div>
-      </section>
+      </section> -->
     </div>
 	</gcds-grid>
 </section>
@@ -224,7 +221,7 @@ showDefaultBreadcrumbs: false
   .most-requested-list {
     list-style: disc;
     padding-left: 1.5rem;
-    font-size: 1.125rem;
+    font-size: 1.125rem; /*18 px */
     font-family: Lato;
   } 
   
@@ -234,8 +231,12 @@ showDefaultBreadcrumbs: false
     break-inside: avoid;
   }
   
-  .service-item gcds-link {
-    font-size: 1.25rem;
+  .gcds-card-single {
+
+  }
+
+  .service-item gcds-link  {
+    font-size: 1.25rem; /*20 px */
     font-family: Lato;
     font-weight: 700;
     line-height: 133%;
