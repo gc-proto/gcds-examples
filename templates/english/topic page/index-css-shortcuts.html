@@ -26,16 +26,16 @@ showDefaultBreadcrumbs: false
 
 <!-- Most Requested Section -->
 <section class="pb-200 pt-300" style="background-color: var(--gcds-color-grayscale-50)">
-  <div class="container-wrapper">
+  <div class="container-wrapper"> <!-- margin to small container viewport -->
     <gcds-container size="xl" centered>
       <gcds-grid columns="1" columns-tablet="1" columns-desktop="2fr 10fr">
         <!-- Heading column -->
         <div>
-          <h2 class="limit mt-0 mb-0 font-h5">Most requested</h2> 
+          <h2 class="limit mt-0 mb-0 font-h3">Most requested</h2> 
         </div>
         <!-- Links column -->
         <div>
-          <ul class="font-family-heading font-bold mb-200 font-size-text-small list-disc d-grid md:grid-cols-2 gap-200">
+          <ul class="font-family-heading font-bold mb-200 font-size-text-small list-disc d-grid md:grid-cols-2 gap-100">
             <li>
               <a href="#">[Top task hyperlink 1]</a>
             </li>
@@ -61,8 +61,7 @@ showDefaultBreadcrumbs: false
   </div>
 </section>
 <!-- JM notes:
- 1. doesn't seem to be a list spacing style - had to use mb on each list item, less elegant than applying a style to the list itself
- 2. assigning lg: or xs: to the small typography doesn't work, is this unsupported? -->
+ 1. assigning lg: or xs: to the small typography doesn't work, is this unsupported? -->
 
 <!-- Services and Information Section -->
 <section class="container-wrapper">
