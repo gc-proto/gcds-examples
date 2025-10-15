@@ -2,141 +2,135 @@
 breadcrumbs:
   - href: "/en/"
     text: "GCDS Examples"
-contentHeader: "Topic page template CSS shortcuts (en)"
+contentHeader: "Topic page template - CSS shortcuts (en)"
 dateModified: "2025-08-15"
 description: "A simple, clean template demonstrating the topic page structure with common GCDS components."
 layout: "layouts/topic.njk"
-title: "Topic page template CSS shortcuts (en)"
+title: "Topic page template - CSS shortcuts (en)"
 showDefaultBreadcrumbs: false
 ---
 
-<div class="container-wrapper">
-  <gcds-container size="xl" centered>
-    <gcds-grid columns="1" columns-tablet="1" columns-desktop="1fr 1fr">
-      <div>
-        <gcds-heading tag="h1" character-limit="false">{{ contentHeader }}</gcds-heading>
-        <gcds-text>The introduction block pattern introduces the content of a topic page.</gcds-text>
-      </div>
-      <div class="d-flex justify-content-end contain-fit">
-        <img src="https://dummyimage.com/520x200/000000/FFFFFF.png" class="lg:d-block d-none" alt="">
-      </div>
-    </gcds-grid>
-  </gcds-container>
-</div>
+<gcds-container size="xl" tag="section" main-container centered>
+  <gcds-grid columns="1" columns-tablet="1" columns-desktop="1fr 1fr">
+    <div>
+      <gcds-heading tag="h1" character-limit="false">{{ contentHeader }}</gcds-heading>
+      <gcds-text>The introduction block pattern introduces the content of a topic page.</gcds-text>
+    </div>
+    <div class="d-flex justify-content-end contain-fit">
+      <img src="https://dummyimage.com/520x200/000000/FFFFFF.png" class="lg:d-block d-none" alt="">
+    </div>
+  </gcds-grid>
+</gcds-container>
 
 <!-- Most Requested Section -->
 <section class="pb-200 pt-300" style="background-color: var(--gcds-color-grayscale-50)">
-  <div class="container-wrapper"> <!-- margin to small container viewport ?  side margins not working in small viewport-->
-    <gcds-container size="xl" centered>
-      <gcds-grid columns="1" columns-tablet="1" columns-desktop="auto 1fr">
-        <!-- Heading column -->
-          <h2 class="limit mt-0 mb-0 font-size-h3">Most requested</h2> 
-        <!-- Links column -->
-          <ul class="line-text-small font-size-text-small font-family-heading font-bold mb-200 list-disc d-grid md:grid-cols-2 gap-x-300 gap-y-200 lg:mt-100">
-            <li>
-              <gcds-link href="#">[Top task hyperlink with a very long task name that spans over two lines 1]</gcds-link>
-            </li>
-            <li>
-              <gcds-link href="#">[Top task hyperlink 2]</gcds-link>
-            </li>
-            <li>
-              <gcds-link href="#">[Top task hyperlink 3]</gcds-link>
-            </li>
-            <li>
-              <gcds-link href="#">[Top task hyperlink 4]</gcds-link>
-            </li>
-            <li>
-              <gcds-link href="#">[Top task hyperlink 5]</gcds-link>
-            </li>
-            <li>
-              <gcds-link href="#">[Top task hyperlink 6]</gcds-link>
-            </li>
-        </ul>
-      </div>
-      </gcds-grid>
-    </gcds-container>
-  </div>
-</section>
-
-<!-- Services and Information Section -->
-<section class="container-wrapper">
-  <gcds-container size="xl" centered>
-    <h2 class="font-size-h3 mt-400 visibility-sr-only">Services and information</h2> <!-- this is usually hidden as standard, but visible to view to work -->
-    <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" class="mb-500 mt-300">
-      <!-- Service Item 1 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
-
- <!-- Service Item 2 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
-
-      <!-- Service Item 3 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
-
-      <!-- Service Item 4 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
-
-      <!-- Service Item 5 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
-
-      <!-- Service Item 6 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
-
-      <!-- Service Item 7 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
-
-      <!-- Service Item 8 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
-
-      <!-- Service Item 9 -->
-      <div>
-        <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
-        <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
-      </div>
+  <gcds-container size="xl" main-container centered>
+    <gcds-grid columns="1" columns-tablet="1" columns-desktop="auto 1fr">
+      <!-- Heading column -->
+      <h2 class="limit mt-0 mb-0 font-size-h3">Most requested</h2> 
+      <!-- Links column -->
+      <ul class="line-text-small font-size-text-small font-family-heading font-bold mb-200 list-disc d-grid md:grid-cols-2 gap-x-300 gap-y-200 lg:mt-100">
+        <li>
+          <gcds-link href="#">[Top task hyperlink with a very long task name that spans over two lines 1]</gcds-link>
+        </li>
+        <li>
+          <gcds-link href="#">[Top task hyperlink 2]</gcds-link>
+        </li>
+        <li>
+          <gcds-link href="#">[Top task hyperlink 3]</gcds-link>
+        </li>
+        <li>
+          <gcds-link href="#">[Top task hyperlink 4]</gcds-link>
+        </li>
+        <li>
+          <gcds-link href="#">[Top task hyperlink 5]</gcds-link>
+        </li>
+        <li>
+          <gcds-link href="#">[Top task hyperlink 6]</gcds-link>
+        </li>
+      </ul>
     </gcds-grid>
   </gcds-container>
 </section>
 
-<section class="container-wrapper">
+<!-- Services and Information Section -->
+<gcds-container size="xl" tag="section" main-container centered>
+  <h2 class="font-size-h3 mt-400 visibility-sr-only">Services and information</h2> <!-- this is usually hidden as standard, but visible to view to work -->
+  <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" class="mb-500 mt-300">
+    <!-- Service Item 1 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+      <!-- <gcds-text size="small" margin-top="100" margin-bottom="200"> filed issue #293 for of responsive typography controls -->
+    </div>
+
+    <!-- Service Item 2 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+    </div>
+
+    <!-- Service Item 3 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+    </div>
+
+    <!-- Service Item 4 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+    </div>
+
+    <!-- Service Item 5 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+    </div>
+
+    <!-- Service Item 6 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+    </div>
+
+    <!-- Service Item 7 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+    </div>
+
+    <!-- Service Item 8 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+    </div>
+
+    <!-- Service Item 9 -->
+    <div>
+      <gcds-link class="font-family-heading font-bold mt-0" href="#">[Hyperlink text]</gcds-link>
+      <p class="font-size-text-small mt-100 mb-200">Use action verbs, or simply list keywords to summarize the information or tasks that can be accomplished on the page it links to</p>
+    </div>
+  </gcds-grid>
+</gcds-container>
+
+<gcds-container size="xl" tag="section" main-container centered>
   <gcds-grid columnns="3" columns-tablet="1" columns-desktop="2fr 1fr">
+    <div>
+      <h2 class="font-size-h3 mt-0 mb-300 visibility-sr-only">Featured</h2>
+      <gcds-grid class="mb-300 hydrated gap-0" columns="1fr" columns-desktop="1fr 1fr" align-items="start">
         <div>
-            <h2 class="font-size-h3 mt-0 mb-300 visibility-sr-only">Featured</h2>
-        <gcds-grid class="mb-300 hydrated gap-0" columns="1fr" columns-desktop="1fr 1fr" align-items="start">
-            <div>
-                <img class="img-responsive pe-100"src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
-            </div>
-            <div class="mt-300">
-              <gcds-link class="gcds-heading limit mt-0 font-h5" href="#">[Feature hyperlink text]</gcds-link>
-              <p class="mt-100">Brief description of the feature being promoted.</p>
-            </div>
-          </gcds-grid>
+          <img class="img-responsive pe-100"src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
+        </div>
+        <div class="mt-300">
+          <gcds-link class="gcds-heading limit mt-0 font-h5" href="#">[Feature hyperlink text]</gcds-link>
+          <p class="mt-100">Brief description of the feature being promoted.</p>
+        </div>
+      </gcds-grid>
     </div>
     <div>
       <section class="mb-300">
-         <h2 class="font-size-h3 mt-0 mb-300">On social media</h2>
+        <h2 class="font-size-h3 mt-0 mb-300">On social media</h2>
         <ul class="social-media-list font-bold font-size-text-small ms-300">
           <li class="mb-200 social-media-item facebook">
             <gcds-link href="#" class="facebook">
@@ -167,8 +161,7 @@ showDefaultBreadcrumbs: false
       </section>
     </div>
 	</gcds-grid>
-</section>
-
+</gcds-container>
 
 <style>
 
@@ -176,13 +169,6 @@ showDefaultBreadcrumbs: false
   .contain-fit img {
     object-fit: contain; /* this preserves aspect ratio, no CSS shortcuts available to fix this JM can find */
   }
-  
- 
-  .most-requested-item {
-    break-inside: avoid; /* David added, is this needed? JM to ask */
-  }
-
-
 
   /* Social Media Follow Us Section Styles */
 
@@ -228,5 +214,4 @@ showDefaultBreadcrumbs: false
   .social-media-item.linkedin gcds-link::before {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAACXBIWXMAAAsTAAALEwEAmpwYAAA7amlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMjEgNzkuMTU1NzcyLCAyMDE0LzAxLzEzLTE5OjQ0OjAwICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgICAgICAgICB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIKICAgICAgICAgICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgICAgICAgICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgICAgICAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+QWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4bXA6Q3JlYXRlRGF0ZT4yMDEyLTExLTAxVDEzOjA4OjE0LTA0OjAwPC94bXA6Q3JlYXRlRGF0ZT4KICAgICAgICAgPHhtcDpNb2RpZnlEYXRlPjIwMTUtMDItMjRUMTM6MjY6MjMtMDU6MDA8L3htcDpNb2RpZnlEYXRlPgogICAgICAgICA8eG1wOk1ldGFkYXRhRGF0ZT4yMDE1LTAyLTI0VDEzOjI2OjIzLTA1OjAwPC94bXA6TWV0YWRhdGFEYXRlPgogICAgICAgICA8eG1wTU06SW5zdGFuY2VJRD54bXAuaWlkOjVjYTc1ZjdmLTU0NWMtOGY0YS05NDRiLTdmNjUwYmRjZjdkMDwveG1wTU06SW5zdGFuY2VJRD4KICAgICAgICAgPHhtcE1NOkRvY3VtZW50SUQ+YWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOjkxYjg0YjE0LWJjNTItMTFlNC04ZmMyLWMzMmMzN2VlOTM3ODwveG1wTU06RG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOkRlcml2ZWRGcm9tIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgPHN0UmVmOmluc3RhbmNlSUQ+eG1wLmlpZDpDMTAyMEM1NTFDN0IxMUUyQjkxNEY3RUNEMkY1ODRBRDwvc3RSZWY6aW5zdGFuY2VJRD4KICAgICAgICAgICAgPHN0UmVmOmRvY3VtZW50SUQ+eG1wLmRpZDpDMTAyMEM1NjFDN0IxMUUyQjkxNEY3RUNEMkY1ODRBRDwvc3RSZWY6ZG9jdW1lbnRJRD4KICAgICAgICAgPC94bXBNTTpEZXJpdmVkRnJvbT4KICAgICAgICAgPHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD54bXAuZGlkOkMxMDIwQzU4MUM3QjExRTJCOTE0RjdFQ0QyRjU4NEFEPC94bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpIaXN0b3J5PgogICAgICAgICAgICA8cmRmOlNlcT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+c2F2ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDpiYWU1MTMwNy0xYzQwLTQ5NGEtOGYyMS01MzlkMWRkNWU3NDE8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTUtMDItMjRUMTM6MjM6NTgtMDU6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE0IChXaW5kb3dzKTwvc3RFdnQ6c29mdHdhcmVBZ2VudD4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmNoYW5nZWQ+Lzwvc3RFdnQ6Y2hhbmdlZD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6YWN0aW9uPnNhdmVkPC9zdEV2dDphY3Rpb24+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDppbnN0YW5jZUlEPnhtcC5paWQ6NWNhNzVmN2YtNTQ1Yy04ZjRhLTk0NGItN2Y2NTBiZGNmN2QwPC9zdEV2dDppbnN0YW5jZUlEPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6d2hlbj4yMDE1LTAyLTI0VDEzOjI2OjIzLTA1OjAwPC9zdEV2dDp3aGVuPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6c29mdHdhcmVBZ2VudD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoV2luZG93cyk8L3N0RXZ0OnNvZnR3YXJlQWdlbnQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpjaGFuZ2VkPi88L3N0RXZ0OmNoYW5nZWQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICA8L3JkZjpTZXE+CiAgICAgICAgIDwveG1wTU06SGlzdG9yeT4KICAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9wbmc8L2RjOmZvcm1hdD4KICAgICAgICAgPHBob3Rvc2hvcDpDb2xvck1vZGU+MzwvcGhvdG9zaG9wOkNvbG9yTW9kZT4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlmZjpPcmllbnRhdGlvbj4KICAgICAgICAgPHRpZmY6WFJlc29sdXRpb24+NzIwMDAwLzEwMDAwPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjAwMDAvMTAwMDA8L3RpZmY6WVJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDxleGlmOkNvbG9yU3BhY2U+NjU1MzU8L2V4aWY6Q29sb3JTcGFjZT4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjI3PC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjI3PC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz51EJCFAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAL9SURBVHjavJZLaNRQFIa/O0nm4UwfVouttiC1PkEUrRtdKBatiC4FEQQFwY3dWhBBBF3pTtyoaxE3ilIEERREQcRHfZf6wkdL7XNenUkmyXVxayaZqULttD+EzNxzc0/Of/7zE0FX9zHgNGAweygApwRd3ZI5Qggwi/8EOC6MZGEoA6at1ioDUwcsIEJIQK4AjmTX5qXEDY2b7wZxknmoiYI7YwIsvciqC47k8sENHNnUDEDPQIqOi48ZTJsQMypCo8LYBB0blniJANY1VnNyzxpImRXrmYLjUh8Pl21YlAiDlBVOVhvj9rMfvBlMe0uulJy/1wfxykxFsWcxg2QyT9uFR5xqX04ionHl6XdevR+EBXFwZLBCIZRSLRuyBUBCWIeoDpqAKcgQdHWngCrE5AFDWUjlVTSqQ0MVGBrkbXX9QVSHjAmJCOuaazE0wefRCUYH0uolyhWcLlZmuaALrnVuoSER8ZaP3nhN7/Of7Gxv5cS2Vq+o/VdfEKuNcf1QGxubagAYzlrc7Rvm+K23/OxPQd28QELd1yBAsG9tY2COF8bD9CbzLFsQZ2tLnbd+tmMle9Yson6eEdh7YP1itrcuZNWZeySzVmBkQj5CAfg2nguOve2CoZExixRK4HBbUyCRHw2JMJ07VkDa/Isap4E/hY/nCpy+84Fz9z9hlzjM3hX1UBUB252Cxul6j+Oy7dITeh58Ain5lbM4t3u1F19cHVEUWs7Mk30YytLzcRha6iBl8vDLWCCuCpUzpxFgZMJSP7QQaIKC65Ykk2Wz9t/JspYDBcdroBBiGnY1TWhCqIErEc2sJJuZEc9pMll0AT8MTYDtEjWC7zU/ZhSNWUq1j6DzUCJIvTTty/4UTTVRbzljOhAzGM4W+DqW80k/o5Q4qciM6QTiP5L5Mu6Kru9VWKJXv8oCMVGuin89O+n6Qd5sNzgfRkhVYLsB6yEkVExOStGV6jvGL09D858c1oFISZPKO+tKdXi4JCZ9dzFFPIiIDnTO1Rfx7wEA4YQP61bPS5MAAAAASUVORK5CYII=");
   }
-  
 </style>

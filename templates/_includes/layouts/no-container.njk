@@ -53,17 +53,15 @@
       </gcds-breadcrumbs>
       {% endif %}
     </gcds-header>
-      
+    <main id="main-content" role="main">
     {{ content | safe }}
-
+    </main>
     <!-- Date modified component -->
-    <div class="container-wrapper">
-      <gcds-container size="xl" centered>
-        {% if dateModified %}
-        <gcds-date-modified>{{ dateModified | date("YYYY-MM-DD") }}</gcds-date-modified>
-        {% endif %}
-      </gcds-container>
-    </div>
+    <gcds-container size="xl" tag="section" main-container centered>
+      {% if dateModified %}
+      <gcds-date-modified>{{ dateModified | date("YYYY-MM-DD") }}</gcds-date-modified>
+      {% endif %}
+    </gcds-container>
 
     <gcds-footer 
       display="full"
@@ -80,12 +78,6 @@
         pointer-events: none;
       }
     {% endif %}
-
-    .container-wrapper {
-      margin: var(--gcds-spacing-0) auto;
-      max-width: var(--gcds-container-xl);
-      width: 90%;
-    }
     </style>
   </body>
 </html>
