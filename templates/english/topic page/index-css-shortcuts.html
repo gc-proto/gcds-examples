@@ -26,7 +26,7 @@ showDefaultBreadcrumbs: false
 
 <!-- Most Requested Section -->
 <section class="pb-200 pt-300" style="background-color: var(--gcds-color-grayscale-50)">
-  <div class="container-wrapper"> <!-- margin to small container viewport -->
+  <div class="container-wrapper"> <!-- margin to small container viewport ?  side margins not working in small viewport-->
     <gcds-container size="xl" centered>
       <gcds-grid columns="1" columns-tablet="1" columns-desktop="auto 1fr">
         <!-- Heading column -->
@@ -121,7 +121,6 @@ showDefaultBreadcrumbs: false
 </section>
 
 <section class="container-wrapper">
-         <!-- JM notes: should probably be a card variant image should also be part of the clickable link, none of this functions properly -->
   <gcds-grid columnns="3" columns-tablet="1" columns-desktop="2fr 1fr">
         <div>
             <h2 class="font-size-h3 mt-0 mb-300 visibility-sr-only">Featured</h2>
@@ -193,7 +192,6 @@ showDefaultBreadcrumbs: false
     min-height: 38px;
     line-height: 38px;
     position: relative;
-    text-decoration: underline;
   }
 
   .social-media-item gcds-link::before {
