@@ -28,30 +28,30 @@ showDefaultBreadcrumbs: false
 <section class="pb-200 pt-300" style="background-color: var(--gcds-color-grayscale-50)">
   <div class="container-wrapper"> <!-- margin to small container viewport -->
     <gcds-container size="xl" centered>
-      <gcds-grid columns="1" columns-tablet="1" columns-desktop="2fr 10fr">
+      <gcds-grid columns="1" columns-tablet="1" columns-desktop="2fr 10fr" >
         <!-- Heading column -->
         <div>
-          <h2 class="limit mt-0 mb-0 font-h3">Most requested</h2> 
+          <h2 class="limit mt-0 mb-0 font-size-h5">Most requested</h2> 
         </div>
         <!-- Links column -->
         <div>
           <ul class="font-family-heading font-bold mb-200 font-size-text-small list-disc d-grid md:grid-cols-2 gap-100">
-            <li class="link-default link-hover">
+            <li class="link-default hover:link-hover">
               <a href="#">[Top task hyperlink 1]</a>
             </li>
-            <li class="link-default link-hover">
+            <li class="link-default hover:link-hover">
               <a href="#">[Top task hyperlink 2]</a>
             </li>
-            <li class="link-default link-hover">
+            <li class="link-default hover:link-hover">
               <a href="#">[Top task hyperlink 3]</a>
             </li>
-            <li class="link-default link-hover">
+            <li class="link-default hover:link-hover">
               <a href="#">[Top task hyperlink 4]</a>
             </li>
-            <li class="link-default link-hover">
+            <li class="link-default hover:link-hover">
               <a href="#">[Top task hyperlink 5]</a>
             </li>
-            <li class="link-default link-hover">
+            <li class="link-default hover:link-hover">
               <a href="#">[Top task hyperlink 6]</a>
             </li>
           </ul>
@@ -60,8 +60,43 @@ showDefaultBreadcrumbs: false
     </gcds-container>
   </div>
 </section>
-<!-- JM notes:
- 1. assigning lg: or xs: to the small typography doesn't work, is this unsupported? -->
+
+<!-- Most Requested Section -->
+<section class="pb-200 pt-300" style="background-color: var(--gcds-color-grayscale-50)">
+  <div class="container-wrapper"> <!-- margin to small container viewport -->
+    <gcds-container size="xl" centered>
+      <gcds-grid columns="1" columns-tablet="1" columns-desktop="2fr 10fr" >
+        <!-- Heading column -->
+        <div>
+          <h2 class="limit mt-0 mb-0 font-size-h5">Most requested</h2> 
+        </div>
+        <!-- Links column -->
+        <div>
+          <ul class="font-family-heading font-bold mb-200 font-size-text-small list-disc d-grid md:grid-cols-2 gap-100">
+            <li class="link-default hover:link-hover">
+              <a href="#">[Top task hyperlink 1]</a>
+            </li>
+            <li class="link-default hover:link-hover">
+              <a href="#">[Top task hyperlink 2]</a>
+            </li>
+            <li class="link-default hover:link-hover">
+              <a href="#">[Top task hyperlink 3]</a>
+            </li>
+            <li class="link-default hover:link-hover">
+              <a href="#">[Top task hyperlink 4]</a>
+            </li>
+            <li class="link-default hover:link-hover">
+              <a href="#">[Top task hyperlink 5]</a>
+            </li>
+            <li class="link-default hover:link-hover">
+              <a href="#">[Top task hyperlink 6]</a>
+            </li>
+          </ul>
+        </div>
+      </gcds-grid>
+    </gcds-container>
+  </div>
+</section>
 
 <!-- Services and Information Section -->
 <section class="container-wrapper">
