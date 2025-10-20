@@ -115,6 +115,7 @@ showDefaultBreadcrumbs: false
 </gcds-container>
 
 <gcds-container size="xl" tag="section" main-container centered>
+  <!-- JM: grid alignment of items may work better than these screen size margins ? try later -->
   <gcds-grid columnns="3" columns-tablet="1" columns-desktop="2fr 1fr">
     <div>
       <h2 class="font-size-h3 mt-0 mb-300 visibility-sr-only">Featured</h2>
@@ -161,9 +162,9 @@ showDefaultBreadcrumbs: false
       </section>
     </div>
     <gcds-grid columnns="2" columns-tablet="1" columns-desktop="auto 1fr">
-      <!-- another use case for responsive typography being impacted by prefixes, if I use font-size-text-small for the h2 it gets too small in mobile, but is perfect for desktop -->
+      <!-- JM: another use case for responsive typography being impacted by prefixes, if I use font-size-text-small for the h2 it gets too small in mobile, but is perfect for desktop -->
     <div class="lg:d-flex lg:align-items-center">
-      <h2 class="font-h6 mt-0 mb-0 lg:me-100">From:</h2>
+      <h2 class="font-size-text mt-0 mb-0 lg:me-100">From:</h2>
         <ul class="xs:list-disc vertical-bar font-size-text-small font-bold mt-0 lg:ms-0">
           <li class="font-family-heading"><a class="hover:link-hover link-default" href="#">Department or agency 1</a></li>
           <li class="font-family-heading"><a class="hover:link-hover link-default" href="#">Department or agency 2</a></li>
