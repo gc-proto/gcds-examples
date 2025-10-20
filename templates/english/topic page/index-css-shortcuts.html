@@ -118,12 +118,12 @@ showDefaultBreadcrumbs: false
   <gcds-grid columnns="3" columns-tablet="1" columns-desktop="2fr 1fr">
     <div>
       <h2 class="font-size-h3 mt-0 mb-300 visibility-sr-only">Featured</h2>
-      <gcds-grid class="mb-300 hydrated gap-0" columns="1fr" columns-desktop="1fr 1fr" align-items="start">
+      <gcds-grid class="lg:mb-300 xs:mb-0 hydrated gap-0" columns="1fr" columns-desktop="1fr 1fr" align-items="start">
         <div>
           <img class="img-responsive pe-100"src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
         </div>
-        <div class="mt-300">
-          <gcds-link class="gcds-heading limit mt-0 font-h5" href="#">[Feature hyperlink text]</gcds-link>
+        <div class="lg:mt-300 xs:mb-0 xs:mt-0">
+          <gcds-link class="mt-0 font-h5" href="#">[Feature hyperlink text]</gcds-link>
           <p class="mt-100">Brief description of the feature being promoted.</p>
         </div>
       </gcds-grid>
@@ -161,10 +161,10 @@ showDefaultBreadcrumbs: false
       </section>
     </div>
     <gcds-grid columnns="2" columns-tablet="1" columns-desktop="auto 1fr">
-      <h2 class="font-size-h6 mt-0">From:</h2>
-        <ul class="list-inline-disc font-size-text-small">
-          <gcds-link href="#">[Department or agency 1]</gcds-link>
-          <gcds-link href="#">[Department or agency 2]</gcds-link>
+      <h2 class="font-size-h6 mt-0 mb-0">From:</h2>
+        <ul class="vertical-bar font-size-text-small font-bold mt-0">
+          <li class="font-family-heading"><gcds-link href="#">[Department or agency 1]</gcds-link></li>
+          <li class="font-family-heading"><gcds-link href="#">[Department or agency 2]</gcds-link></li>
         </ul>
       </section>
     </gcds-grid>
@@ -173,15 +173,29 @@ showDefaultBreadcrumbs: false
 
 <style>
 
+  /* vertical bar list style, could be used with Indigenous language toggles too */
+
+  ul.vertical-bar li:not(:last-child)::after {
+    content: "|";
+    padding: 0 6px;
+    font-weight: 900;
+  }
+
+  ul.vertical-bar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul.vertical-bar li {
+    display: inline;
+  }
+
   /* position the image properly */
   .contain-fit img {
     object-fit: contain; /* this preserves aspect ratio, no CSS shortcuts available to fix this JM can find */
   }
-
-  .list-inline-disc {
-
-  }
-
 
   /* Social Media Follow Us Section Styles */
 
