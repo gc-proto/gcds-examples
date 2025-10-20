@@ -161,11 +161,13 @@ showDefaultBreadcrumbs: false
       </section>
     </div>
     <gcds-grid columnns="2" columns-tablet="1" columns-desktop="auto 1fr">
-      <h2 class="font-size-h6 mt-0 mb-0">From:</h2>
-        <ul class="vertical-bar font-size-text-small font-bold mt-0">
-          <li class="font-family-heading"><gcds-link href="#">[Department or agency 1]</gcds-link></li>
-          <li class="font-family-heading"><gcds-link href="#">[Department or agency 2]</gcds-link></li>
+    <div class="lg:d-flex lg:align-items-center">
+      <h2 class="font-size-text-small mt-0 mb-0">From:</h2>
+        <ul class="xs:list-disc vertical-bar font-size-text-small font-bold mt-0 ms-0">
+          <li class="font-family-heading"><a class="hover:link-underline hover:link-hover link-no-underline link-default" href="#">Department or agency 1</a></li>
+          <li class="font-family-heading"><a class="hover:link-underline hover:link-hover link-no-underline link-default" ref="#">Department or agency 2</a></li>
         </ul>
+      </div>
       </section>
     </gcds-grid>
 	</gcds-grid>
@@ -175,23 +177,26 @@ showDefaultBreadcrumbs: false
 
   /* vertical bar list style, could be used with Indigenous language toggles too */
 
-  ul.vertical-bar li:not(:last-child)::after {
-    content: "|";
-    padding: 0 6px;
-    font-weight: 900;
-  }
+  @media (min-width: 1024px) {
 
-  ul.vertical-bar {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
+    ul.vertical-bar li:not(:last-child)::after {
+      content: "|";
+      padding: 0 6px;
+      font-weight: 900;
+    }
 
-  ul.vertical-bar li {
-    display: inline;
-  }
+    ul.vertical-bar {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
 
+    ul.vertical-bar li {
+      display: inline;
+    }
+
+  }
   /* position the image properly */
   .contain-fit img {
     object-fit: contain; /* this preserves aspect ratio, no CSS shortcuts available to fix this JM can find */
