@@ -134,32 +134,40 @@ showDefaultBreadcrumbs: false
         <ul class="social-media-list font-bold font-size-text-small ms-300">
           <li class="mb-200 social-media-item facebook">
             <a href="#" class="facebook hover:link-underline hover:link-hover link-no-underline link-default">
-              <gcds-sr-only>Facebook: </gcds-sr-only>FacebookPageName
+              <gcds-sr-only>Facebook: </gcds-sr-only>FacebookPageName&nbsp;<gcds-icon name="external"></gcds-icon>
             </a>
           </li>
           <li class="mb-200 social-media-item x-social">
-            <a href="#" external class="x-social facebook hover:link-underline hover:link-hover link-no-underline link-default">
-              <gcds-sr-only>X: </gcds-sr-only>@XAccount
+            <a href="#" class="x-social facebook hover:link-underline hover:link-hover link-no-underline link-default">
+              <gcds-sr-only>X: </gcds-sr-only>@XAccount&nbsp;<gcds-icon name="external"></gcds-icon>
             </a>
           </li>
           <li class="mb-200 social-media-item youtube">
-            <a href="#" external class="youtube facebook hover:link-underline hover:link-hover link-no-underline link-default">
-              <gcds-sr-only>YouTube: </gcds-sr-only>YouTubeName
+            <a href="#" class="youtube facebook hover:link-underline hover:link-hover link-no-underline link-default">
+              <gcds-sr-only>YouTube: </gcds-sr-only>YouTubeName&nbsp;<gcds-icon name="external"></gcds-icon>
             </a>
           </li>
           <li class="mb-200 social-media-item instagram">
-              <a href="#" external class="instagram facebook hover:link-underline hover:link-hover link-no-underline link-default">
-                <gcds-sr-only>Instagram: </gcds-sr-only>InstagramName
+              <a href="#" class="instagram facebook hover:link-underline hover:link-hover link-no-underline link-default">
+                <gcds-sr-only>Instagram: </gcds-sr-only>InstagramName&nbsp; <gcds-icon name="external"></gcds-icon>
               </a>
             </li>
             <li class="mb-200 social-media-item linkedin">
-              <a href="#" external class="linkedin facebook hover:link-underline hover:link-hover link-no-underline link-default">
-                <gcds-sr-only>LinkedIn: </gcds-sr-only>LinkedInName
+              <a href="#" class="linkedin facebook hover:link-underline hover:link-hover link-no-underline link-default">
+                <gcds-sr-only>LinkedIn: </gcds-sr-only>LinkedInName&nbsp;<gcds-icon name="external"></gcds-icon>
               </a>
             </li>
         </ul>
       </section>
     </div>
+    <gcds-grid columnns="2" columns-tablet="1" columns-desktop="auto 1fr">
+      <h2 class="font-size-h6 mt-0">From:</h2>
+        <ul class="list-inline-disc font-size-text-small">
+          <gcds-link href="#">[Department or agency 1]</gcds-link>
+          <gcds-link href="#">[Department or agency 2]</gcds-link>
+        </ul>
+      </section>
+    </gcds-grid>
 	</gcds-grid>
 </gcds-container>
 
@@ -169,6 +177,11 @@ showDefaultBreadcrumbs: false
   .contain-fit img {
     object-fit: contain; /* this preserves aspect ratio, no CSS shortcuts available to fix this JM can find */
   }
+
+  .list-inline-disc {
+
+  }
+
 
   /* Social Media Follow Us Section Styles */
 
