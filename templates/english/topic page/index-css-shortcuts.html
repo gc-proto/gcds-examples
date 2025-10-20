@@ -130,29 +130,33 @@ showDefaultBreadcrumbs: false
     <div>
       <section class="mb-300">
         <h2 class="font-size-h3 mt-0 mb-300">On social media</h2>
-        <ul class="social-media-list font-bold font-size-text-small ms-300">
+        <ul class="social-media-list font-bold font-size-text-small ms-300 d-grid gap-y-100 ">
           <li class="mb-200 social-media-item facebook">
-            <a href="#" class="facebook hover:link-underline hover:link-hover link-no-underline link-default">
+            <a href="#" class="facebook hover:link-underline hover:link-hover link-no-underline link-default position-relative
+ps-600">
               <gcds-sr-only>Facebook: </gcds-sr-only>FacebookPageName&nbsp;<gcds-icon name="external"></gcds-icon>
             </a>
           </li>
           <li class="mb-200 social-media-item x-social">
-            <a href="#" class="x-social facebook hover:link-underline hover:link-hover link-no-underline link-default">
+            <a href="#" class="x-social hover:link-underline hover:link-hover link-no-underline link-default position-relative
+ps-600">
               <gcds-sr-only>X: </gcds-sr-only>@XAccount&nbsp;<gcds-icon name="external"></gcds-icon>
             </a>
           </li>
           <li class="mb-200 social-media-item youtube">
-            <a href="#" class="youtube facebook hover:link-underline hover:link-hover link-no-underline link-default">
+            <a href="#" class="youtube hover:link-underline hover:link-hover link-no-underline link-default position-relative
+ps-600">
               <gcds-sr-only>YouTube: </gcds-sr-only>YouTubeName&nbsp;<gcds-icon name="external"></gcds-icon>
             </a>
           </li>
           <li class="mb-200 social-media-item instagram">
-              <a href="#" class="instagram facebook hover:link-underline hover:link-hover link-no-underline link-default">
+              <a href="#" class="instagram hover:link-underline hover:link-hover link-no-underline link-default position-relative
+ps-600">
                 <gcds-sr-only>Instagram: </gcds-sr-only>InstagramName&nbsp; <gcds-icon name="external"></gcds-icon>
               </a>
             </li>
             <li class="mb-200 social-media-item linkedin">
-              <a href="#" class="linkedin facebook hover:link-underline hover:link-hover link-no-underline link-default">
+              <a href="#" class="linkedin hover:link-underline hover:link-hover link-no-underline link-default position-relative ps-600">
                 <gcds-sr-only>LinkedIn: </gcds-sr-only>LinkedInName&nbsp;<gcds-icon name="external"></gcds-icon>
               </a>
             </li>
@@ -166,7 +170,7 @@ showDefaultBreadcrumbs: false
       <!-- JM: another use case for responsive typography being impacted by prefixes, if I use font-size-text-small for the h2 it gets too small in mobile, but is perfect for desktop -->
     <div class="lg:d-flex lg:align-items-start mt-400">
       <h2 class="font-size-text mt-0 xs:mb-100 lg:mb-0 lg:me-100">From:</h2>
-        <ul class="xs:list-disc vertical-bar font-size-text-small font-bold mt-0 lg:ms-0 d-grid gap-y-100 line-text-small">
+        <ul class="xs:list-disc vertical-bar font-size-text-small font-bold mt-0 lg:ms-0 d-grid gap-y-100 line-text-small lg:d-inline">
           <li class="font-family-heading"><a class="hover:link-hover link-default" href="#">Department or agency 1</a></li>
           <li class="font-family-heading"><a class="hover:link-hover link-default" href="#">Department or agency 2</a></li>
           <li class="font-family-heading"><a class="hover:link-hover link-default" href="#">Department or agency 3</a></li>
@@ -198,10 +202,6 @@ showDefaultBreadcrumbs: false
       flex-wrap: wrap;
     }
 
-    ul.vertical-bar li {
-      display: inline;
-    }
-
   }
   /* position the image properly */
   .contain-fit img {
@@ -209,14 +209,6 @@ showDefaultBreadcrumbs: false
   }
 
   /* Social Media Follow Us Section Styles */
-
-  .social-media-item a {
-    display: inline-block;
-    padding-left: 45px;
-    min-height: 38px;
-    line-height: 38px;
-    position: relative;
-  }
 
   .social-media-item a::before {
     content: "";
