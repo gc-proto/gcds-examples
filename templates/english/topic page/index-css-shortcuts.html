@@ -189,7 +189,7 @@ ps-600">
 
   @media (min-width: 1024px) {
 
-    ul.vertical-bar li::after {
+    ul.vertical-bar li:not(:only-child)::after {
       content: "|";
       padding: var(--gcds-spacing-0) var(--gcds-spacing-100);
       font-weight: var(--gcds-font-weights-bold);
