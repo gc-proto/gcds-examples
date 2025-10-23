@@ -115,7 +115,7 @@ showDefaultBreadcrumbs: false
 
   <!-- Featured: single feature -->
   <gcds-grid columns="3" columns-tablet="1" columns-desktop="2fr 1fr" class="mt-400 mb-400">
-    <div>
+    <div class="gc-feature">
       <h2 class="font-size-h3 mt-0 mb-300 visibility-sr-only">Featured</h2>
       <gcds-grid class="lg:pt-100 lg:ps-100 lg:mt-400 lg:mb-400 xs:mb-0 hydrated gap-0 position-relative hover:bg-light" columns="1fr" columns-desktop="1fr 1fr" align-items="start">
         <div>
@@ -190,6 +190,13 @@ showDefaultBreadcrumbs: false
       font-weight: var(--gcds-font-weights-bold);
     }
   }
+
+  .gc-feature .hover\:bg-light:hover {
+    background-color: var(--gcds-card-background-color);
+    box-shadow: var(--gcds-card-box-shadow);
+    overflow: hidden;
+    position: relative;
+}
 
   /* position the image properly */
   .contain-fit img {
