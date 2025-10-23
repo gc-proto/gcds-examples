@@ -195,64 +195,6 @@ showDefaultBreadcrumbs: false
 </gcds-container>
 
 <style>
-  /* Services and Information Section Styles */
-  .gc-srvinfo {
-    padding: 2rem 0;
-  }
-
-  .service-item gcds-heading {
-    font-size: 1.25rem; /* 20px equivalent */
-    margin-top: var(--gcds-spacing-350); /* ~23px equivalent */
-  }
-
-  .service-item gcds-text {
-    font-size: 1.125rem; /* 18px equivalent */
-    line-height: 1.5;
-  }
-
-  /* Override first service item to have no top margin */
-  .service-item:nth-child(-n+3) gcds-heading {
-    margin-top: 0;
-  }
-
-  /* Most Requested Section Styles */
-  .most-requested-section {
-    background-color: #f5f5f5;
-    padding: 2rem 0;
-  }
-
-  .most-requested-list {
-    list-style: disc;
-    margin: 0;
-    padding-left: 1.5rem;
-    line-height: 1.8em;
-    columns: 1;
-    column-gap: 2rem;
-  }
-
-  .most-requested-item,
-  .most-requested-item-last {
-    margin-bottom: 0.75rem;
-    break-inside: avoid;
-  }
-
-  .most-requested-item-last {
-    margin-bottom: 0;
-  }
-
-  /* Responsive column layout */
-  @media (min-width: 768px) {
-    .most-requested-list {
-      columns: 2;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .most-requested-list {
-      columns: 1;
-    }
-  }
-
   /* Social Media Follow Us Section Styles */
   .gc-followus {
     margin-bottom: var(--gcds-spacing-400);
