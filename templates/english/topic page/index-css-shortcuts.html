@@ -117,7 +117,7 @@ showDefaultBreadcrumbs: false
   <gcds-grid columns="3" columns-tablet="2" columns-desktop="2fr 1fr" class="mt-400 mb-400">
     <div class="gc-feature">
       <h2 class="font-size-h3 mt-0 mb-300 visibility-sr-only">Featured</h2>
-      <gcds-grid class="lg:pt-100 lg:ps-100 md:mt-400 md:mb-400 xs:mb-0 hydrated gap-0 position-relative gc-feature-hover" columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr" align-items="center">
+      <gcds-grid class="pt-100 px-100 md:mt-300 md:mb-300 xs:mb-0 hydrated gap-0 position-relative gc-feature-hover" columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr" align-items="center">
         <div>
           <img class="img-responsive img-full pe-100"src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
         </div>
@@ -129,9 +129,9 @@ showDefaultBreadcrumbs: false
     </div>
    <!-- Social media -->
     <div>
-      <section class="mb-400">
+      <section class="mb-300">
         <h2 class="font-size-h3 mt-0 mb-300">On social media</h2>
-        <ul class="font-bold font-size-text-small ms-300 d-grid gap-y-200">
+        <ul class="font-bold font-size-text-small ms-300 d-grid gap-y-200 md:grid-cols-2 lg:grid-cols-1 sm:grid-cols-1">
           <li class="gc-social-media-item facebook">
             <a href="#" class="py-100 pe-100 facebook hover:link-underline hover:link-hover focus:link-light link-no-underline link-default position-relative ps-600">
               <gcds-sr-only>Facebook: </gcds-sr-only>FacebookPageName&nbsp;<gcds-icon name="external"></gcds-icon>
@@ -160,14 +160,14 @@ showDefaultBreadcrumbs: false
         </ul>
       </section>
     </div>
-
+    <!-- JM: to optimize space, social media icons would be ideal to switch to two list rows in tablet-->
 	</gcds-grid>
 
- <gcds-grid columns="1" columns-tablet="auto 1fr" columns-desktop="auto 1fr" class="mt-400 mb-400">
+ <gcds-grid columns="1" columns-tablet="auto 1fr" columns-desktop="auto 1fr" class="mt-300 mb-300">
       <!-- JM: another use case for responsive typography being impacted by prefixes, if I use font-size-text for the h2 it gets too small in mobile, but is perfect for desktop -->
-    <div class="lg:d-flex lg:align-items-start">
+    <div class="md:d-flex md:align-items-start">
       <h2 class="font-size-text mt-0 xs:mb-100 lg:mb-0 lg:me-100">From:</h2>
-        <ul class="gc-vertical-bar font-size-text-small font-bold line-text-small mt-0 d-grid gap-y-100 xs:list-disc lg:list-none lg:flex-wrap lg:d-flex lg:ms-0">
+        <ul class="gc-vertical-bar font-size-text-small font-bold line-text-small mt-0 d-grid gap-y-100 xs:list-disc md:list-none md:flex-wrap md:d-flex md:ms-100 lg:ms-0">
           <li class="font-family-heading"><a class="hover:link-hover link-default" href="#">Department or agency 1</a></li>
           <li class="font-family-heading"><a class="hover:link-hover link-default" href="#">Department or agency 2</a></li>
           <li class="font-family-heading"><a class="hover:link-hover link-default" href="#">Department or agency 3</a></li>
@@ -182,7 +182,7 @@ showDefaultBreadcrumbs: false
 <style>
   /* vertical bar list style, could be used with Indigenous language toggles too */
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
 
     ul.gc-vertical-bar li:not(:only-child)::after {
       content: "|";
@@ -190,13 +190,13 @@ showDefaultBreadcrumbs: false
       font-weight: var(--gcds-font-weights-bold);
     }
   }
- /* gc-feature hover effect desktop */
-  .gc-feature .gc-feature-hover:hover {
-    background-color: var(--gcds-card-background-color);
-    box-shadow: var(--gcds-card-box-shadow);
-    overflow: hidden;
-    position: relative;
-  }
+ /* gc-feature hover effect */
+    .gc-feature .gc-feature-hover:hover {
+      background-color: var(--gcds-card-background-color);
+      box-shadow: var(--gcds-card-box-shadow);
+      overflow: hidden;
+      position: relative;
+    }
 
   /* position the image properly */
   .gc-contain-fit img {
