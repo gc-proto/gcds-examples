@@ -114,14 +114,14 @@ showDefaultBreadcrumbs: false
   </gcds-grid>
 
   <!-- Featured: single feature -->
-  <gcds-grid columns="3" columns-tablet="1" columns-desktop="2fr 1fr" class="mt-400 mb-400">
+  <gcds-grid columns="3" columns-tablet="2" columns-desktop="2fr 1fr" class="mt-400 mb-400">
     <div class="gc-feature">
       <h2 class="font-size-h3 mt-0 mb-300 visibility-sr-only">Featured</h2>
-      <gcds-grid class="lg:pt-100 lg:ps-100 lg:mt-400 lg:mb-400 xs:mb-0 hydrated gap-0 position-relative gc-feature-hover" columns="1fr" columns-desktop="1fr 1fr" align-items="start">
+      <gcds-grid class="lg:pt-100 lg:ps-100 md:mt-400 md:mb-400 xs:mb-0 hydrated gap-0 position-relative gc-feature-hover" columns="1fr" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr" align-items="center">
         <div>
-          <img class="img-responsive pe-100"src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
+          <img class="img-responsive img-full pe-100"src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
         </div>
-        <div class="lg:mt-300 xs:mb-0 xs:mt-0">
+        <div class="xs:mb-0 xs:mt-0">
           <a class="mt-0 font-h5 gc-stretched-link hover:link-hover link-default" href="#">[Feature hyperlink text]</a>
           <p class="mt-100 font-size-text-small">Brief description of the feature being promoted.</p>
         </div>
@@ -163,7 +163,7 @@ showDefaultBreadcrumbs: false
 
 	</gcds-grid>
 
- <gcds-grid columns="2" columns-tablet="1" columns-desktop="auto 1fr" class="mt-400 mb-400">
+ <gcds-grid columns="1" columns-tablet="auto 1fr" columns-desktop="auto 1fr" class="mt-400 mb-400">
       <!-- JM: another use case for responsive typography being impacted by prefixes, if I use font-size-text for the h2 it gets too small in mobile, but is perfect for desktop -->
     <div class="lg:d-flex lg:align-items-start">
       <h2 class="font-size-text mt-0 xs:mb-100 lg:mb-0 lg:me-100">From:</h2>
@@ -190,7 +190,7 @@ showDefaultBreadcrumbs: false
       font-weight: var(--gcds-font-weights-bold);
     }
   }
- /* gc-feature hover effect */
+ /* gc-feature hover effect desktop */
   .gc-feature .gc-feature-hover:hover {
     background-color: var(--gcds-card-background-color);
     box-shadow: var(--gcds-card-box-shadow);
