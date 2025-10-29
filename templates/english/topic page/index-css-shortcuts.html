@@ -184,7 +184,7 @@ showDefaultBreadcrumbs: false
 
   @media (min-width: 1024px) {
 
-    ul.gc-vertical-bar li:not(:only-child)::after {
+    ul.gc-vertical-bar li:not(:only-child):not(:last-child)::after {
       content: "|";
       padding: var(--gcds-spacing-0) var(--gcds-spacing-100);
       font-weight: var(--gcds-font-weights-bold);
