@@ -1,0 +1,70 @@
+<p>Building a GCDS component with <a href="https://stenciljs.com/">Stencil.js</a> involves setting up the project, creating the component files, and then building the project for use. Here is a step-by-step guide on how to do it.</p>
+<h3>Step 1: Set up a new StencilJS project</h3>
+<p>First, you'll need to install the Stencil CLI and create a new project. Stencil requires a recent LTS version of Node.js.</p>
+<ol>
+<li>Open your terminal.</li>
+<li>Run <code>npm init stencil</code> to begin the project creation process.</li>
+<li>When prompted, select the <strong>component</strong> starter project. This will create a collection of web components that can be used anywhere.<pre><code>? Select a starter project.
+
+Starters marked as [community] are developed by the Stencil
+Community, rather than Ionic. For more information on the 
+Stencil Community, please see github.com/stencil-community
+
+❯   component                Collection of web components that can be
+                            used anywhere
+    app [community]          Minimal starter for building a Stencil 
+                            app or website
+    ionic-pwa [community]    Ionic PWA starter with tabs layout and routes
+</code></pre>
+</li>
+<li>Give your project a name when prompted, and the CLI will scaffold a new project with all the necessary files.<pre><code>✔ Pick a starter › component
+? Project name › my-first-gcds-component-project
+</code></pre>
+</li>
+</ol>
+<h3>Step 2: Understand the project structure and create a new component</h3>
+<p>Your new project will have a <code>src/</code> directory. This is where you'll be working, and inside it, the <code>src/components/</code> folder is where your component files are stored.</p>
+<ol>
+<li>Inside <code>src/components/</code>, create a new folder for your component. A good naming convention is to use the component's tag name, for example, <code>my-gcds-component</code>.</li>
+<li>Inside this new folder, create a <code>.tsx</code> file (e.g., <code>my-gcds-component.tsx</code>) to define the component's logic and a <code>.css</code> file for styling.</li>
+</ol>
+<h3>Step 3: Define the component and its logic</h3>
+<p>Use the <code>@Component</code> decorator to define your component in the <code>.tsx</code> file. This decorator tells Stencil what the element's name is, where to find its stylesheet, and if it should use the Shadow DOM.</p>
+<pre><code class="language-typescript">import { Component, h } from '@stencil/core';
+
+@Component({
+  tag: 'my-gcds-component',
+  styleUrl: 'my-gcds-component.css',
+  shadow: true,
+})
+export class MyGcdsComponent {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Hello, GCDS!&lt;/h1&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre>
+<p>The <code>render()</code> function in the class returns <strong>JSX</strong>, which is a way of writing HTML within your TypeScript code. This JSX defines the structure of your component.</p>
+<h3>Step 4: Add styling and build the project</h3>
+<p>Add your CSS to the <code>.css</code> file you created in Step 2. Stencil's build process will ensure these styles are correctly applied to your component.</p>
+<p>Once your component is ready, you can build the project by running:</p>
+<pre><code class="language-bash">npm run build
+</code></pre>
+<p>This command creates a production-ready version of your components in the <code>dist</code> directory. From there, you can use these compiled components in any web project.</p>
+<h3>Step 5: Use your component</h3>
+<p>To use your newly created GCDS component, you can include it in an HTML file or another web project by importing the compiled JavaScript files from the <code>dist</code> directory.</p>
+<p>Run a local development server to test them. The easiest way to do this is with a command provided by the Stencil CLI.</p>
+<h3>Run the Development Server</h3>
+<p>To start the local server and view your components, open your terminal in the root directory of your Stencil project and run the following command:</p>
+<pre><code class="language-bash">npm start
+</code></pre>
+<p>This command starts a development server with <strong>hot-module reloading</strong>, meaning any changes you make to your component's code will automatically be reflected in your browser without requiring a manual refresh. The server will also automatically open a new browser tab for you to view your components.</p>
+<h3>Use the Components</h3>
+<p>Once the server is running, your components are available in a local development environment. You can use them directly in an HTML file just like any other HTML tag.</p>
+<p>For example, if you defined a component with the tag <code>my-gcds-component</code>, you can add it to an HTML file and it will be rendered by the browser:</p>
+<pre><code class="language-html">&lt;my-gcds-component&gt;&lt;/my-gcds-component&gt;
+</code></pre>
+<p>Source: <a href="https://stenciljs.com/docs/getting-started">StencilJS Documentation</a></p>

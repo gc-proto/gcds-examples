@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GC Design System Examples</title>
+    <meta name="description" content="GC Design System example templates and patterns" />
+    <!-- GC Design System Utility -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-utility@1.9.2/dist/gcds-utility.min.css"
+    />
+    <!-- GC Design System Components -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.esm.js"
+    ></script>
+    
+      
+        <link rel="alternate" hreflang="en" href="http://localhost:8080/en/page sujets/" />
+      
+        <link rel="alternate" hreflang="fr" href="http://localhost:8080/fr/page sujets/" />
+      
+    
+  </head>
+  <body>
+    <gcds-header
+      signature-has-link="true"
+      skip-to-href="#main-content"
+    
+      lang-href="#"
+    
+    >
+      <!-- Search component in header (optional, can be removed if not needed) -->
+      
+      <gcds-search slot="search"></gcds-search>
+      
+
+      <!-- Breadcrumbs component in header (optional, can be customized per page) -->
+      
+    </gcds-header>
+
+    <gcds-container
+      id="main-content"
+      main-container
+      size="xl"
+      centered
+      tag="main"
+    >
+      
+      
+      
+
+      <!-- Date modified component -->
+      
+    </gcds-container>
+
+    <gcds-footer 
+      display="full"
+      contextual-heading="Exemples du système de conception GC"
+      contextual-links='{"Voir les modèles":"/fr/","Galerie":"/fr/galerie/","GitHub":"https://github.com/gc-proto/gcds-examples"}'
+    ></gcds-footer>
+
+    <style>
+    /* Optional: visually disable language toggle when counterpart missing */
+    
+      gcds-header a[href="#"] {
+        pointer-events: none;
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    
+    </style>
+  </body>
+</html>

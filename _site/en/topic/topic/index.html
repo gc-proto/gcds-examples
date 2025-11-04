@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic page template (en) – GC Design System Examples</title>
+    <meta name="description" content="A simple, clean template demonstrating basic page structure with common GCDS components." />
+    <!-- GC Design System Utility -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-utility@1.9.2/dist/gcds-utility.min.css"
+    />
+    <!-- GC Design System Components -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.esm.js"
+    ></script>
+    
+      
+        <link rel="alternate" hreflang="en" href="http://localhost:8080/en/topic/" />
+      
+        <link rel="alternate" hreflang="fr" href="http://localhost:8080/fr/topic/" />
+      
+    
+  </head>
+  <body>
+    <gcds-header
+      signature-has-link="true"
+      skip-to-href="#main-content"
+    
+      lang-href="#"
+    
+    >
+      <!-- Search component in header (optional, can be removed if not needed) -->
+      
+      <gcds-search slot="search"></gcds-search>
+      
+
+      <!-- Breadcrumbs component in header (optional, can be customized per page) -->
+      
+      <gcds-breadcrumbs slot="breadcrumb">
+        
+        <gcds-breadcrumbs-item href="/en/">GCDS Examples</gcds-breadcrumbs-item>
+        
+      </gcds-breadcrumbs>
+      
+    </gcds-header>
+
+    <gcds-container
+      id="main-content"
+      main-container
+      size="xl"
+      centered
+      tag="main"
+    >
+      
+      <gcds-heading tag="h1">Basic page template (en)</gcds-heading>
+      
+      
+      
+<section>
+  <gcds-heading tag="h2">Section 1</gcds-heading>
+  <gcds-text>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Turp is
+    egestas maecenas pharetra convallis posuere morbi leo urna.
+  </gcds-text>
+
+  <gcds-heading tag="h3">Subsection heading</gcds-heading>
+  <gcds-text>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Turp is
+    egestas maecenas pharetra convallis posuere morbi leo urna.
+  </gcds-text>
+
+  <gcds-heading tag="h3">Subsection heading</gcds-heading>
+  <gcds-text>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Turp is
+    egestas maecenas pharetra convallis posuere morbi leo urna.
+  </gcds-text>
+  </section>
+
+  <section>
+  <gcds-heading tag="h2">Section 2</gcds-heading>
+  <gcds-text>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Turp is
+    egestas maecenas pharetra convallis posuere morbi leo urna.
+  </gcds-text>
+  </section>
+
+  <section>
+  <gcds-heading tag="h2">Section 3</gcds-heading>
+  <gcds-text>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Turp is
+    egestas maecenas pharetra convallis posuere morbi leo urna.
+  </gcds-text>
+</section>
+
+      <!-- Date modified component -->
+      
+      <gcds-date-modified>2025-08-15</gcds-date-modified>
+      
+    </gcds-container>
+
+    <gcds-footer 
+      display="full"
+      contextual-heading="GC Design System Examples"
+      contextual-links='{"View templates":"/en/","Gallery":"/en/gallery/","GitHub":"https://github.com/gc-proto/gcds-examples"}'
+    ></gcds-footer>
+
+    <style>
+    /* Optional: visually disable language toggle when counterpart missing */
+    
+      gcds-header a[href="#"] {
+        pointer-events: none;
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    
+    </style>
+  </body>
+</html>
