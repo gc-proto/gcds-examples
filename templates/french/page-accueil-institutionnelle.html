@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page d&#39;accueil institutionnelle - CSS shortcuts (fr) – GC Design System Examples</title>
+    <meta name="description" content="Un modèle simple et épuré démontrant la structure de la page d&#39;accueil institutionnelle avec des composants GCDS courants ou des raccourcis CSS." />
+    <!-- GC Design System Utility -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-utility@1.9.2/dist/gcds-utility.min.css"
+    />
+    <!-- GC Design System Components -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.design-system.alpha.canada.ca/@cdssnc/gcds-components@0.40.0/dist/gcds/gcds.esm.js"
+    ></script>
+    
+  </head>
+  <body>
+    <gcds-header
+      signature-has-link="true"
+      skip-to-href="#main-content"
+    
+      
+      lang-href="/en/page-accueil-institutionnelle.html"
+      
+    
+    >
+      <!-- Search component in header (optional, can be removed if not needed) -->
+      
+
+      <!-- Breadcrumbs component in header (optional, can be customized per page) -->
+      
+      <gcds-breadcrumbs slot="breadcrumb">
+        
+        <gcds-breadcrumbs-item href="/fr/">Aperçu du développement GCDS</gcds-breadcrumbs-item>
+        
+      </gcds-breadcrumbs>
+      
+    </gcds-header>
+    <main id="main-content" role="main">
+    
+<gcds-container size="xl" tag="section" main-container centered class="gc-bkg-img position-relative overflow-hidden">
+    <gcds-grid columns="1" columns-tablet="1fr" columns-desktop="1fr 1fr">
+        <div class="gc-intro pt-400 pb-400 pe-400 mb-0">
+            <gcds-heading tag="h1" character-limit="false">Page d’accueil institutionnelle</gcds-heading>
+            <p>Le modèle de bloc d&#39;introduction présente le contenu d&#39;une page de sujet.</p>
+            <gcds-button class="me-300 hydrated" button-role="start">Bouton de super-tâche</gcds-button>
+        </div>
+    </gcds-grid>
+</gcds-container>
+<!-- JM: needs fine tuning, but this solves the issue of departments not having a full-size image ready for proper contrast and instead use a gradient, or they make the image full width. Both are supported here -->
+
+<!-- Featured link -->
+<div class="gc-featured-link pb-200 pt-200">
+    <gcds-container size="xl" main-container centered>
+        <h2 class="visibility-sr-only">Titre de la promotion</h2>
+        <a class="link-light my-0 mx-0 font-family-heading font-bold" href="#">[Promotion title]</a>
+    </gcds-container>
+</div>
+
+<!-- Most requested section -->
+<section class="pb-200 pt-300" style="background-color: var(--gcds-color-grayscale-50);">
+    <gcds-container size="xl" main-container centered>
+        <gcds-grid columns="1" columns-tablet="1" columns-desktop="auto 1fr">
+            <!-- Heading column -->
+            <h2 class="limit mt-0 mb-0 font-size-h3">En demande</h2>
+            <!-- Links column -->
+            <ul class="line-text-small font-size-text-small font-family-heading font-bold mb-200 list-disc d-grid md:grid-cols-2 gap-x-300 gap-y-200 lg:mt-100">
+                
+                <li>
+                    <gcds-link href="#">[Lien vers une tâche principale avec un nom de tâche très long qui s&#39;étend sur deux lignes 1]</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">[Lien vers une tâche principale 2]</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">[Lien vers une tâche principale 3]</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">[Lien vers une tâche principale 4]</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">[Lien vers une tâche principale 5]</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">[Lien vers une tâche principale 6]</gcds-link>
+                </li>
+                
+            </ul>
+        </gcds-grid>
+    </gcds-container>
+</section>
+
+<!-- Services and information section -->
+<gcds-container size="xl" tag="section" main-container centered>
+    <h2 class="font-size-h3 mt-400 visibility-sr-only">Services et information</h2>
+    <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr 1fr" class="mb-400 mt-400">
+        <!-- Service Item 1 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+
+        <!-- Service Item 2 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+
+        <!-- Service Item 3 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+
+        <!-- Service Item 4 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+
+        <!-- Service Item 5 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+
+        <!-- Service Item 6 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+
+        <!-- Service Item 7 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+
+        <!-- Service Item 8 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+
+        <!-- Service Item 9 -->
+        <div>
+            <gcds-link class="font-family-heading font-bold mt-0" href="#">[Texte de l&#39;hyperlien]</gcds-link>
+            <p class="font-size-text-small lg:mb-200 xs:mb-0">Utilisez des verbes d&#39;action, ou inscrivez simplement des mots-clés pour résumer les renseignements ou les tâches qui peuvent être accomplies sur la page liée</p>
+        </div>
+    </gcds-grid>
+</gcds-container>
+
+<!-- Contact us band -->
+<section class="pb-300 pt-100" style="background-color: var(--gcds-color-grayscale-50);">
+    <gcds-container size="xl" main-container centered>
+        <!-- Heading column -->
+        <h2 class="font-size-h3 mt-300">Coordonnées</h2>
+        <!-- Links column -->
+        <ul class="font-bold mb-200 list-unstyled d-grid md:grid-cols-3 gap-x-300 gap-y-200 lg:mt-100">
+            
+            <li>
+                <gcds-link href="#">Communiquer avec [institution]</gcds-link>
+            </li>
+            
+            <li>
+                <gcds-link href="#">[Tâche de contact 2]</gcds-link>
+            </li>
+            
+            <li>
+                <gcds-link href="#">[Tâche de contact 3]</gcds-link>
+            </li>
+            
+        </ul>
+    </gcds-container>
+</section>
+
+<!-- About the institution  -->
+<gcds-container size="xl" main-container centered>
+    <gcds-grid columns="3" columns-tablet="2" columns-desktop="2fr 1fr" class="mt-400 mb-400">
+        <div>
+            <h2 class="font-size-h3 mt-0 mb-300">À propos de [institution]</h2>
+            <!-- Links column -->
+            <ul class="font-bold mb-200 list-unstyled d-grid md:grid-cols-2 gap-x-300 gap-y-200 lg:mt-100">
+                
+                <li>
+                    <gcds-link href="#">Mandat</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">Structure organisationnelle</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">Transparence</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">Accessibilité</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">Possibilités d&#39;emploi</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">Rapports</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">Observations</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">Avis de mesure d&#39;exécution</gcds-link>
+                </li>
+                
+                <li>
+                    <gcds-link href="#">[Lien institutionnel]</gcds-link>
+                </li>
+                
+                <li>
+                    More:&nbsp;
+                    <gcds-link href="#">Au sujet de [institution]</gcds-link>
+                </li>
+            </ul>
+        </div>
+        <!-- Social media -->
+        <section class="mb-200">
+            <h2 class="font-size-h3 mt-0 mb-300">Dans les médias sociaux</h2>
+            <ul class="font-bold font-size-text-small ms-300 d-grid gap-y-200 md:grid-cols-2 lg:grid-cols-1 sm:grid-cols-1">
+                <li class="gc-social-media-item facebook">
+                    <a href="#" class="py-100 pe-100 facebook hover:link-underline hover:link-hover focus:link-light link-no-underline link-default position-relative ps-600">
+                        <gcds-sr-only>Facebook:  </gcds-sr-only>NomPageFacebook&nbsp;<gcds-icon name="external"></gcds-icon>
+                    </a>
+                </li>
+                <li class="gc-social-media-item x-social">
+                    <a href="#" class="py-100 pe-100 x-social hover:link-underline hover:link-hover focus:link-light link-no-underline link-default position-relative ps-600">
+                        <gcds-sr-only>X:  </gcds-sr-only>@CompteX&nbsp;<gcds-icon name="external"></gcds-icon>
+                    </a>
+                </li>
+                <li class="gc-social-media-item youtube">
+                    <a href="#" class="py-100 pe-100 youtube hover:link-underline hover:link-hover focus:link-light link-no-underline link-default position-relative ps-600">
+                        <gcds-sr-only>YouTube:  </gcds-sr-only>NomChaîneYouTube&nbsp;<gcds-icon name="external"></gcds-icon>
+                    </a>
+                </li>
+                <li class="gc-social-media-item instagram">
+                    <a href="#" class="py-100 pe-100 instagram hover:link-underline hover:link-hover focus:link-light link-no-underline link-default position-relative ps-600">
+                        <gcds-sr-only>Instagram:  </gcds-sr-only>NomInstagram&nbsp; <gcds-icon name="external"></gcds-icon>
+                    </a>
+                </li>
+                <li class="gc-social-media-item linkedin">
+                    <a href="#" class="py-100 pe-100 linkedin hover:link-underline hover:link-hover focus:link-light link-no-underline link-default position-relative ps-600">
+                        <gcds-sr-only>LinkedIn:  </gcds-sr-only>NomLinkedIn&nbsp;<gcds-icon name="external"></gcds-icon>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </gcds-grid>
+<h2 class="font-size-h3 mt-0 md:mb-0">Ministre(s)</h2>
+<!-- Lots of variants needed here -->
+<gcds-grid columns="1" columns-tablet="1" columns-desktop="1fr 1fr" gap="300" class="mb-300">
+    
+  <!-- First minister card -->
+  <div>
+    <gcds-grid columns="1" columns-tablet="auto 1fr" columns-desktop="auto 1fr" gap="300" class="pt-100 px-100 md:mt-300 xs:mb-0 position-relative gc-minister-hover gc-minister" align-items="center">
+      <!-- Image -->
+      <div>
+        <img class="img-responsive" src="https://dummyimage.com/200x200/000000/FFFFFF.png" alt="" />
+      </div>
+      <!-- Text content wrapper -->
+      <div>
+         <a class="mt-0 font-h6 gc-stretched-link hover:link-hover focus:link-light link-default d-block" href="#">L&#39;honorable [prénom et nom de famille]</a>
+        <p class="mt-100 font-size-text-small mb-0">[Titre officiel]</p>
+      </div>
+    </gcds-grid>
+  </div>
+
+  <!-- Second minister card -->
+  <div>
+    <gcds-grid columns="1" columns-tablet="auto 1fr" columns-desktop="auto 1fr" gap="300" class="pt-100 px-100 md:mt-300 xs:mb-0 position-relative gc-minister gc-minister-hover" align-items="center">
+      <div>
+        <img class="img-responsive" src="https://dummyimage.com/200x200/000000/FFFFFF.png" alt="" />
+      </div>
+      <div>
+        <a class="mt-0 font-h6 gc-stretched-link hover:link-hover focus:link-light link-default d-block" href="#">L&#39;honorable [prénom et nom de famille]</a>
+        <p class="mt-100 font-size-text-small mb-0">[Titre officiel]</p>
+      </div>
+    </gcds-grid>
+  </div>
+</gcds-grid>
+
+<gcds-grid columns="1" columns-tablet="1" columns-desktop="1fr 2fr" class="mt-600">
+  <!-- News section -->
+  <div>
+    <h2 class="font-size-h3 mt-0 mb-300">Nouvelles</h2>
+    <ul class="list-unstyled">
+      <li class="mb-200">
+        <gcds-link class="font-bold" href="#">[Titre de nouvelle]</gcds-link><br />
+        <small class="feeds-date"><time>2021-03-22 08:19</time></small>
+      </li>
+      <li class="mb-200">
+        <gcds-link class="font-bold" href="#">[Titre de nouvelle]</gcds-link><br />
+        <small class="feeds-date"><time>2021-03-21 08:20</time></small>
+      </li>
+      <li class="mb-200">
+        <gcds-link class="font-bold" href="#">[Titre de nouvelle]</gcds-link><br />
+        <small class="feeds-date"><time>2021-03-20 09:15</time></small>
+      </li>
+    </ul>
+    <p class="font-size-text-small">Plus : <gcds-link href="#">nouvelles de [institution]</gcds-link></p>
+  </div>
+  
+  <!-- Features section with nested grid -->
+  <div class="gc-feature mb-300">
+    <h2 class="font-size-h3 mt-0 mb-300">En vedette</h2>
+    <gcds-grid columns="1" columns-tablet="1fr 1fr" columns-desktop="1fr 1fr" gap="300">
+      <!-- Feature 1 -->
+      <div class="pt-100 px-100 position-relative gc-feature-card gc-feature-hover">
+        <img class="img-responsive img-full mb-200" src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
+        <a class="mt-0 font-h5 gc-stretched-link hover:link-hover focus:link-light link-default" href="#">[Lien vers l&#39;élément en vedette]</a>
+        <p class="mt-100 font-size-text-small mb-0">Brève description de l&#39;élément en vedette.</p>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="pt-100 px-100 position-relative gc-feature-card gc-feature-hover">
+        <img class="img-responsive img-full mb-200" src="https://dummyimage.com/360x203/000000/FFFFFF.png" alt="">
+        <a class="mt-0 font-h5 gc-stretched-link hover:link-hover focus:link-light link-default" href="#">[Lien vers l&#39;élément en vedette]</a>
+        <p class="mt-100 font-size-text-small mb-0">Brève description de l&#39;élément en vedette.</p>
+      </div>
+    </gcds-grid>
+  </div>
+  
+</gcds-grid>
+</gcds-container>
+
+<style>
+    /* featured link, to be updated when new colours launch */
+    .gc-featured-link {
+        /* background-color: var(--gcds-color-blue-500); */
+        background-color: #59799B;
+    }
+
+    /* ILP background image */
+
+    .gc-bkg-img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: right center;
+        background-repeat: no-repeat;
+        z-index: 0;
+    }
+
+    @media (min-width: 1024px) {
+        .gc-bkg-img::before {
+            background-image: url("https://dummyimage.com/600x375/000000/FFFFFF.png");
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .gc-bkg-img::before {
+            background-image: url("https://dummyimage.com/800x375/000000/FFFFFF.png");
+        }
+    }
+
+    @media (min-width: 1920px) {
+        .gc-bkg-img::before {
+            background-image: url("https://dummyimage.com/1300x375/000000/FFFFFF.png");
+        }
+    }
+
+    .gc-bkg-img > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+        .gc-bkg-img::before {
+            display: none;
+        }
+    }
+
+    /* other colours permitted from colour chart, white is default */
+    .gc-intro {
+        background-color: var(--gcds-bg-white);
+    }
+
+  /* use for full width img, or to add full colour */
+    .gc-intro-cover {
+            margin-left: -100vw;
+            padding-left: 100vw;
+    }
+
+    .gc-bkg-img-cover::before {
+        background-size: cover;
+    }
+
+    /* hover card style */
+
+    .gc-feature-card {
+          background-color: var(--gcds-card-background-color);
+          box-shadow: var(--gcds-card-box-shadow);
+          color: var(--gcds-card-color);
+          display: block;
+          height: 100%;
+          max-width: var(--gcds-card-max-width);
+          overflow: hidden;
+          padding: var(--gcds-spacing-200);
+          position: relative;
+    }
+    .gc-feature .gc-feature-hover:hover,
+    .gc-minister.gc-minister-hover:hover {
+        background-color: var(--gcds-bg-light);
+        box-shadow: var(--gcds-card-box-shadow);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .gc-stretched-link:after {
+        bottom: 0;
+        content: "";
+        left: 0;
+        pointer-events: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    /* Social media icon styles */
+
+    .gc-social-media-item a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 34px;
+        height: 34px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: var(--gcds-border-radius-xl);
+    }
+
+    /* Social media icons */
+    .gc-social-media-item.facebook a::before {
+        background-image: url("/assets/facebook.svg");
+    }
+
+    .gc-social-media-item.x-social a::before {
+        background-image: url("/assets/x.svg");
+    }
+
+    .gc-social-media-item.youtube a::before {
+        background-image: url("/assets/youtube.svg");
+    }
+
+    .gc-social-media-item.instagram a::before {
+        background-image: url("/assets/instagram.svg");
+    }
+
+    .gc-social-media-item.linkedin a::before {
+        background-image: url("/assets/linkedin.svg");
+    }
+
+  @media (max-width: 767px) {
+    .gc-minister {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .gc-minister > div:first-child {
+      order: 2;
+    }
+    
+    .gc-minister > div:last-child {
+      order: 1;
+    }
+  }
+  /* Shadow DOM is stopping me from styling for the title being below the image on mobile, or fixing the giant gap if I reorder the HTML */
+
+</style>
+    </main>
+    <!-- Date modified component -->
+    <gcds-container size="xl" tag="section" main-container centered>
+      
+      <gcds-date-modified>2025-11-10</gcds-date-modified>
+      
+    </gcds-container>
+
+    <gcds-footer 
+      display="full"
+      contextual-heading="GC Design System Examples"
+      contextual-links=''
+    ></gcds-footer>
+
+    <style>
+    /* Optional: visually disable language toggle when counterpart missing */
+    
+    </style>
+  </body>
+</html>
