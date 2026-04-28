@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import {
   Text,
   Select,
@@ -9,45 +9,43 @@ import {
   Textarea,
   Fieldset,
   FileUploader,
-  RadioGroup,
   Stepper,
   Checkboxes,
-  Radios
-} from '../../components';
-import { provinces } from '../../utils/constants';
+  Radios,
+} from "../../components";
+import { provinces } from "../../utils/constants";
 
-import { GcdsLink, GcdsErrorSummary } from '@cdssnc/gcds-components-react';
+import { GcdsLink, GcdsErrorSummary } from "@gcds-core/components-react";
 
 interface StepOneProps {
   formdata: {
-    holidayName: string,
-    newHoliday: string,
-    holidayDate: string,
-    learnOfHoliday: string,
-    holidayType: Array<string>,
-    otherHoliday: string,
-    province: string,
-    image: string[] | null,
+    holidayName: string;
+    newHoliday: string;
+    holidayDate: string;
+    learnOfHoliday: string;
+    holidayType: Array<string>;
+    otherHoliday: string;
+    province: string;
+    image: string[] | null;
   };
   handleInputChange: (e: any) => void;
   focusHeading: boolean;
-};
+}
 
-const StepOne: React.FC<StepOneProps> = ((props) => {
-
+const StepOne: React.FC<StepOneProps> = (props) => {
   const { formdata, handleInputChange, focusHeading } = props;
 
   const newHolidayOptions = [
-    { "label": "Yes", "id": "radio1", "value": "yes" },
-    { "label": "No", "id": "radio2", "value": "no" },
-    { "label": "Not sure", "id": "radio3", "value": "notsure" }
+    { label: "Yes", id: "radio1", value: "yes" },
+    { label: "No", id: "radio2", value: "no" },
+    { label: "Not sure", id: "radio3", value: "notsure" },
   ];
 
   useEffect(() => {
     // only focus the stepper heading when returning from step 2
     if (focusHeading) {
       setTimeout(() => {
-        document.querySelector('gcds-stepper')?.focus();
+        document.querySelector("gcds-stepper")?.focus();
       }, 150);
     }
   }, []);
@@ -66,10 +64,7 @@ const StepOne: React.FC<StepOneProps> = ((props) => {
 
       <GcdsErrorSummary listen />
 
-      <Fieldset
-        legend="General holiday information"
-        legendSize='h3'
-      >
+      <Fieldset legend="General holiday information" legendSize="h3">
         <Input
           inputId="holidayName"
           label="Name of holiday"
@@ -102,8 +97,7 @@ const StepOne: React.FC<StepOneProps> = ((props) => {
           required
           value={formdata.holidayDate}
           onInput={handleInputChange}
-        >
-        </DateInput>
+        ></DateInput>
 
         <Textarea
           label="How did you learn of this holiday?"
@@ -114,11 +108,7 @@ const StepOne: React.FC<StepOneProps> = ((props) => {
         />
       </Fieldset>
 
-      <Fieldset
-        legend="Type of holiday"
-        legendSize='h3'
-        className="mt-600"
-      >
+      <Fieldset legend="Type of holiday" legendSize="h3" className="mt-600">
         {/* Implementation of new gcds-checkboxes component */}
         <Checkboxes
           legend="What type of holiday is this?"
@@ -132,32 +122,34 @@ const StepOne: React.FC<StepOneProps> = ((props) => {
             {
               label: "Federal",
               id: "federal",
-              value: "federal"
+              value: "federal",
             },
             {
               label: "National",
               id: "national",
-              value: "national"
+              value: "national",
             },
             {
               label: "Other",
               id: "other",
-              value: "other"
-            }
+              value: "other",
+            },
           ]}
         ></Checkboxes>
 
-        <Details
-          detailsTitle="What are federal holidays?"
-          className="mb-225"
-        >
+        <Details detailsTitle="What are federal holidays?" className="mb-225">
           {/* The page this will link to hasn't been created yet */}
           <Text marginBottom="0">
-            If your job is regulated by the federal government, you get federal holidays instead of the provincial holidays. Find out more about <GcdsLink href="/federal-and-provincial-holidays">who gets federal holidays</GcdsLink>.
+            If your job is regulated by the federal government, you get federal
+            holidays instead of the provincial holidays. Find out more about{" "}
+            <GcdsLink href="/federal-and-provincial-holidays">
+              who gets federal holidays
+            </GcdsLink>
+            .
           </Text>
         </Details>
 
-        {formdata.holidayType.includes('other') &&
+        {formdata.holidayType.includes("other") && (
           <Select
             selectId="province"
             label="If this holiday occurs in a specific province or territory, select the location."
@@ -169,13 +161,13 @@ const StepOne: React.FC<StepOneProps> = ((props) => {
             value={formdata.province}
             onInput={handleInputChange}
           >
-            {Object.keys(provinces).map(key => (
+            {Object.keys(provinces).map((key) => (
               <option key={key} value={key}>
                 {provinces[key]}
               </option>
             ))}
           </Select>
-        }
+        )}
 
         <FileUploader
           label="Upload an image of this holiday"
@@ -187,14 +179,11 @@ const StepOne: React.FC<StepOneProps> = ((props) => {
         />
       </Fieldset>
 
-      <Button
-        type="submit"
-        buttonRole="primary"
-      >
+      <Button type="submit" buttonRole="primary">
         Next step
       </Button>
     </>
-  )
-});
+  );
+};
 
 export default StepOne;
